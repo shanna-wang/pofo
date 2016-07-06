@@ -1,0 +1,78 @@
+extends layout
+
+block content
+
+  
+
+  //- section.me-container
+  //-   .me-panel.pic
+  //-   .me-panel.description
+  //-     .photo
+
+  section.about-container.active
+    .container
+      .about-panel.description 
+        .angle
+        p 
+      .about-panel.animation
+        .mobile
+          .item.mobile-0
+          .item.mobile-1
+            h3 Code
+          .item.mobile-2
+            h3 UI Design
+          .item.mobile-3
+            h3 UX Design
+      .about-nav
+        .nav-dot.active
+        .nav-dot
+        .nav-dot
+  
+  section.works-container
+    .container 
+
+      .works-item
+        .works-title
+          p travelhacks 2016
+        .works-preview.travelhacks
+
+      .works-item
+        .works-title
+          p flatbook - check in
+        .works-preview.flatbook-checkin
+
+      .works-item
+        .works-title
+          p flatbook - error page
+        .works-preview.flatbook-error
+
+      .works-item
+        .works-title
+          p flatbook - website
+        .works-preview.flatbook-site
+
+      .works-item
+        .works-title
+          p flatbook - branding
+        .works-preview.flatbook-brand
+
+      .works-item
+        .works-title
+          p dobundle
+        .works-preview.dobundle
+
+      
+
+
+
+
+  section.contact-container
+    .container contact
+
+  nav
+    a(href="javascript:navigate('me')") Me
+    a(href="javascript:navigate('about')") About
+    a(href="javascript:navigate('works')") Works
+    a(href="javascript:navigate('contact')") Contact
+
+      
