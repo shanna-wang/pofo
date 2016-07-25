@@ -212,7 +212,20 @@ h3 {
 a {
   color: $pink;
 }
-
+a.button {
+  @include gradientD2(#FFF8B3, #FFA9B8);
+  height: 70px;
+  padding: 0 30px;
+  line-height: 70px;
+  vertical-align: middle;
+  border-radius: 35px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+}
 $width: 960px;
 
 
@@ -327,152 +340,100 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
   }
 }
 
-.section-about {
+
+.section-me {
   width: 100%;
   height: 100%;
+  @include gradientD2(#525760, #272F39);
   @include flex(center, center, column);
-  @include gradientD2(#FFF8B3, #FFA9B8);
-
-  .container-nav {
-    position: absolute;
-    top: 0;
+  .selfie {
+    @include transition(0.9s all ease);
+    flex: 0 0 150px;
     height: 150px;
-    width: 100%;
+    width: 150px;
+    border-radius: 50%;
+    background: url("../img/noob.png") center center no-repeat;
+    background-size: contain;
+    z-index: 1;
+    border: 10px solid white;
+  }
+  .location {
+    background: url("../img/icon_location.svg") left top no-repeat;
+    background-size: auto 24px;
+    padding-left: 35px;
+    height: 29px;
+    line-height: 29px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 13px;
+  }
+  .text {
+    padding: 100px 50px 50px 50px;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 7px;
+    margin-top: -100px;
+    text-align: center;
 
-    .container {
-      margin: 0 auto;
-      @include transition(0.5s all ease);
-      -webkit-transition-delay: 1s; /* Safari */
-        transition-delay: 1s;
-      height: 100%;
-      @include flex(center, center, row);
-      @include opacity(0);
-      width: 100%;
-      overflow: hidden;
-      @include transform(translateY(50px))
-    }
-    &.visible {
-      .container {
-        @include opacity(1);
-        @include transform(translateY(0px))
-        
-      }
-    }
-
-    .nav {
-      flex: 0 0 130px;
-      margin-right: 60px;
-    }
-    .nav a {
-      text-align: right;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 3px;
-      display: block;
-      @include transition(0.3s all ease);
-      @include transform(translateY(0px));
-      &:hover {
-        @include transform(translateY(-5px));
-      }
-    }
-    .social {
-      margin-left: 60px;
-      flex: 0 0 130px;
-      @include flex(center, space-between, row)
-    }
-    .social a {
+  }
+  .container-nav {
+    padding: 30px;
+    text-align: center;
+    a {
       display: inline-block;
       height: 30px;
       width: 30px;
+      padding: 0 20px;
       @include transition(0.3s all ease);
       @include transform(translateY(0px));
       &.linkedin {
         background: url("../img/icon_linkedin.svg") center center no-repeat;
-        background-size: 13px auto;
+        background-size: 18px auto;
       }
       &.github {
         background: url("../img/icon_github.svg") center center no-repeat;
-        background-size: 17px auto;
+        background-size: 23px auto;
       }
       &.behance {
         background: url("../img/icon_behance.svg") center center no-repeat;
-        background-size: 18px auto;
+        background-size: 23px auto;
       }
       &.email {
         background: url("../img/icon_email.svg") center center no-repeat;
-        background-size: 16px auto;
+        background-size: 20px auto;
       }
       &:hover {
-        @include transform(translateY(-10px));
+        @include transform(translateY(10px));
       }
     }
   }
+}
 
-  .container-me {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    @include flex(center, center, column);
-    @include transition(0.6s all ease-in);
-    height: 100%;
-    perspective: 300px;
+.section-about {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  @include flex(center, center, column);
+  @include gradientD2(#FFF8B3, #FFA9B8);
 
-    .selfie {
-      @include transition(0.9s all ease);
-      flex: 0 0 150px;
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      background: url("../img/noob.png") center center no-repeat;
-      background-size: contain;
-      z-index: 1;
-      border: 10px solid transparent;
-
-      @include opacity(0);
-      @include animation(rotate-pic 1s ease 0.2s 1);
-      -webkit-animation-fill-mode: forwards; 
-              animation-fill-mode: forwards;
-    }
-    .text {
-      flex: 0 0 auto;
-      font-size: 26px;
-      color: white;
-      width: 100%;
-      text-align: center;
-      @include transition(0.6s all ease);
-
-      @include opacity(0);
-
-      @include animation(rotate-text 1s ease 1.5s 1);
-      -webkit-animation-fill-mode: forwards; 
-              animation-fill-mode: forwards;
-    }
-
-    &.min {
-      height: 150px;
-      .selfie {
-        height: 80px;
-        width: 80px;
-        flex-basis: 80px;
-        border: 10px solid rgba(255,255,255,0.1);
-      }
-      .text {
-        @include transition(0.3s all ease);
-        height: 0;
-        overflow: hidden;
-        @include opacity(0);
-        @include transform(translateY(-100px));
-        @include animation(none);
-      }
-    }
-
+  
+  h1 {
+    margin: 0;
+    padding: 0;
+    color: rgba(255,255,255,0.3);
+    font-size: 120px;
+    margin-bottom: -70px;
   }
-
+  h2 {
+    text-align: left;
+    color: rgba(0,0,0,0.3);
+  }
   .container-about {
     @include flex(center, center, row);
-    margin: 150px 50px 100px 50px;
+    margin: 120px 0px 100px 0px;
+    width: 90%;
     border-radius: 4px;
     background: rgba(255,255,255,0.1);
     overflow: hidden;
@@ -484,7 +445,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
     }
     &.visible {
       flex: 0 1 100%;
-      min-height: 450px;
+      min-height: 300px;
       box-shadow: rgba(0,0,0,0.04) 0px 4px 20px 5px;  
       * {
         @include opacity(1);
@@ -629,18 +590,29 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
 
 
     &.description {
+      position: relative;
       background: rgba(255,255,255,0.1);
       width: 0%;
       height: 100%;
       @include opacity(0);
       @include flex(flex-end, flex-start, row)
       .about-item {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
         padding-left: 15px;
         z-index: 1;
+        @include opacity(0);
+        @include transition(0.6s all ease);
+        @include transform(translateX(-200px));
+        &.visible {
+          @include opacity(1);
+          @include transform(translateX(0px));
+        }
       }
       &.expand {
         @include opacity(1);
-        width: 40%;
+        width: 30%;
         padding: 30px;
       }
       .close {
@@ -669,7 +641,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
 
   .about-nav {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: 50px;
     width: 100%;

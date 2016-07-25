@@ -7,25 +7,14 @@ function whatIDo() {
   }, 100);
 }
 
-function start() {
-  $(".container-about").addClass("visible");
-  $(".container-me").addClass("min");
-  $(".container-nav").addClass("visible");
-
-  setTimeout( function(){ 
-    whatIDo();
-  }, 3000);
-  
-}
 
 $(function() {
+  whatIDo();
 
   $(".details").each(function() {
     $(this).hide();
   });
-  $(".about-item").each(function(){
-    $(this).hide();
-  });
+  
 
   setTimeout( function(){ 
     start();
@@ -38,9 +27,9 @@ $(function() {
     $(".nav-dot:nth-child(" + i.slice(-1) + ")").addClass("active");
     
     $(".about-item").each(function(){
-      $(this).hide();
+      $(this).removeClass("visible");
     });
-    $(".about-item." + i).show();
+    $(".about-item." + i).addClass("visible");
 
   });
 
@@ -51,9 +40,9 @@ $(function() {
     $(this).addClass("active");
 
     $(".about-item").each(function(){
-      $(this).hide();
+      $(this).removeClass("visible");
     });
-    $(".about-item.mobile-" + n).show();
+    $(".about-item.mobile-" + n).addClass("visible");
   });
   
 
