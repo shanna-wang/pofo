@@ -418,7 +418,9 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
   @include flex(center, center, column);
   @include gradientD2(#FFF8B3, #FFA9B8);
 
-  
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
   h1 {
     margin: 0;
     padding: 0;
@@ -439,7 +441,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
     overflow: hidden;
     @include transition(1.2s all ease-in);
     flex: 0 0 0;
-    * {
+    .about-panel {
       @include transition(1.2s all ease-in);
       @include opacity(0);
     }
@@ -447,12 +449,33 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
       flex: 0 1 100%;
       min-height: 300px;
       box-shadow: rgba(0,0,0,0.04) 0px 4px 20px 5px;  
-      * {
+      .about-panel {
         @include opacity(1);
       }
     }
   }
-
+  .about-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    @include flex(center, center, row);
+    .button-play {
+      cursor: pointer;
+      height: 150px;
+      width: 150px;
+      background: url("../img/icon_play.svg") center center no-repeat;
+      background-size: contain;
+      @include opacity(0.6);
+      @include transition(0.3s all ease);
+      &:hover {
+        @include opacity(1);
+        @include transform(translateY(-5px));
+      }
+    }
+  }
   .about-panel {
     position: relative;
     @include transition(0.6s all ease);
@@ -476,7 +499,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
         .item {
           position: absolute;
           -webkit-backface-visibility: hidden;
-          @include transition(0.5s all ease);
+          @include transition(0.8s all ease);
           @include transform(rotateY(0deg));
           z-index: -1;
           cursor: pointer;
@@ -646,6 +669,11 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
     height: 50px;
     width: 100%;
     @include flex(center, center, row);
+    @include opacity(0);
+    @include transition(0.3s all ease);
+    &.visible {
+      @include opacity(1);
+    }
     .nav-dot {
       cursor: pointer;
       height: 7px;

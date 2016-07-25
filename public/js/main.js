@@ -3,23 +3,23 @@ function whatIDo() {
     $(".item").addClass("rotate");
     setTimeout( function(){ 
       $(".about-panel.animation").addClass("separate");
+      $(".about-nav").addClass("visible");
     }, 1000);
-  }, 100);
+  }, 1000);
 }
 
 
 $(function() {
-  whatIDo();
+  
 
   $(".details").each(function() {
     $(this).hide();
   });
   
-
-  setTimeout( function(){ 
-    start();
-  }, 3200);
-
+  $(".button-play").on("click", function() {
+    whatIDo();
+    $(this).parent().fadeOut();
+  });
   $(".animation .mobile .item").on("click", function() {
     var i = $(this).attr('id');
     console.log(i);
