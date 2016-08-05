@@ -326,25 +326,7 @@ section {
 
 .section-about {
   width: 100%;
-  height: 100%;
-  padding-top: 50px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  justify-content: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  padding: 50px 0 100px 0;
   background: #FFF8B3;
   background: -moz-linear-gradient(-75deg, #FFF8B3 1%, #FFA9B8 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(1%, #FFF8B3), color-stop(100%, #FFA9B8));
@@ -358,10 +340,11 @@ section {
       display: none; } }
   .section-about h1 {
     margin: 0;
+    margin-bottom: 50px;
     padding: 0;
     color: rgba(255, 255, 255, 0.3);
     font-size: 120px;
-    margin-bottom: -70px; }
+    text-align: center; }
   .section-about h2 {
     text-align: left;
     color: rgba(0, 0, 0, 0.3); }
@@ -383,7 +366,6 @@ section {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin: 120px 0px 100px 0px;
     width: 90%;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.1);

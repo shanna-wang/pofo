@@ -413,9 +413,8 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
 
 .section-about {
   width: 100%;
-  height: 100%;
-  padding-top: 50px;
-  @include flex(center, center, column);
+  
+  padding: 50px 0 100px 0;
   @include gradientD2(#FFF8B3, #FFA9B8);
 
   @media only screen and (max-width: 700px) {
@@ -423,10 +422,11 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
   }
   h1 {
     margin: 0;
+    margin-bottom: 50px;
     padding: 0;
     color: rgba(255,255,255,0.3);
     font-size: 120px;
-    margin-bottom: -70px;
+    text-align: center;
   }
   h2 {
     text-align: left;
@@ -434,7 +434,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
   }
   .container-about {
     @include flex(center, center, row);
-    margin: 120px 0px 100px 0px;
+
     width: 90%;
     border-radius: 4px;
     background: rgba(255,255,255,0.1);
