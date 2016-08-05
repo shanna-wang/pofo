@@ -873,13 +873,14 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
         border-top: 1px solid rgba(0,0,0,0.1);
         border-bottom: 1px solid rgba(0,0,0,0.1);
         @media only screen and (max-width: 750px) {
-          @include flex(top, center, column)
+          display: block;
         }
         .col-role {
           flex: 0 0 230px;
           height: 100%;
           
           @media only screen and (max-width: 750px) {
+            width: 100%;
             flex: 0 0 auto;
             padding-bottom: 50px;
             border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -897,6 +898,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
           height: 100%;
           padding-left: 30px;
           @media only screen and (max-width: 750px) {
+            width: 100%;
             padding-left: 0;
           }
         }
