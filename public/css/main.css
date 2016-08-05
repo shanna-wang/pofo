@@ -390,15 +390,15 @@ section {
     overflow: hidden;
     -webkit-transition: 1.2s all ease-in;
     transition: 1.2s all ease-in;
-    flex: 0 0 0; }
+    flex: 0 0 0;
+    height: 500px; }
     .section-about .container-about .about-panel {
       -webkit-transition: 1.2s all ease-in;
       transition: 1.2s all ease-in;
       opacity: 0;
       filter: alpha(opacity=0); }
     .section-about .container-about.visible {
-      flex: 0 1 100%;
-      min-height: 300px;
+      flex: 0 0 500px;
       box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 5px; }
       .section-about .container-about.visible .about-panel {
         opacity: 1;
