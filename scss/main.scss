@@ -82,83 +82,83 @@ $pink: #EEB1C1;
 }
 
 @-webkit-keyframes rotate-text {
-  0%   { 
-    @include transform(rotateX(180deg)); 
+  0%   {
+    @include transform(rotateX(180deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(rotateX(0deg)); 
+  100% {
+    @include transform(rotateX(0deg));
     @include opacity(1);
   }
 }
 @-moz-keyframes rotate-text {
-  0%   { 
-    @include transform(rotateX(180deg)); 
+  0%   {
+    @include transform(rotateX(180deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(rotateX(0deg)); 
+  100% {
+    @include transform(rotateX(0deg));
     @include opacity(1);
   }
 }
 @-o-keyframes rotate-text {
-  0%   { 
-    @include transform(rotateX(180deg)); 
+  0%   {
+    @include transform(rotateX(180deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(rotateX(0deg)); 
+  100% {
+    @include transform(rotateX(0deg));
     @include opacity(1);
   }
 }
 @keyframes rotate-text {
-  0%   { 
-    @include transform(rotateX(180deg)); 
+  0%   {
+    @include transform(rotateX(180deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(rotateX(0deg)); 
+  100% {
+    @include transform(rotateX(0deg));
     @include opacity(1);
   }
 }
 
 @-webkit-keyframes rotate-pic {
-  0%   { 
-    @include transform(scale(0.5) rotateX(90deg)); 
+  0%   {
+    @include transform(scale(0.5) rotateX(90deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(scale(1) rotateX(0deg)); 
+  100% {
+    @include transform(scale(1) rotateX(0deg));
     @include opacity(1);
   }
 }
 @-moz-keyframes rotate-pic {
-  0%   { 
-    @include transform(scale(0.5) rotateX(90deg)); 
+  0%   {
+    @include transform(scale(0.5) rotateX(90deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(scale(1) rotateX(0deg)); 
+  100% {
+    @include transform(scale(1) rotateX(0deg));
     @include opacity(1);
   }
 }
 @-o-keyframes rotate-pic {
-  0%   { 
-    @include transform(scale(0.5) rotateX(90deg)); 
+  0%   {
+    @include transform(scale(0.5) rotateX(90deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(scale(1) rotateX(0deg)); 
+  100% {
+    @include transform(scale(1) rotateX(0deg));
     @include opacity(1);
   }
 }
 @keyframes rotate-pic {
-  0%   { 
-    @include transform(scale(0.5) rotateX(90deg)); 
+  0%   {
+    @include transform(scale(0.5) rotateX(90deg));
     @include opacity(0);
   }
-  100% { 
-    @include transform(scale(1) rotateX(0deg)); 
+  100% {
+    @include transform(scale(1) rotateX(0deg));
     @include opacity(1);
   }
 }
@@ -232,13 +232,13 @@ $width: 960px;
 section {
   width: 100%;
   position: relative;
-  
+
   .container {
     position: relative;
     width: 100%;
     max-width: $width;
     margin: 0 auto;
-    
+
   }
 
 }
@@ -404,6 +404,10 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
         background: url("../img/icon_email.svg") center center no-repeat;
         background-size: 20px auto;
       }
+      &.dribbble {
+        background: url("../img/icon_dribbble.svg") center center no-repeat;
+        background-size: 23px auto;
+      }
       &:hover {
         @include transform(translateY(10px));
       }
@@ -413,7 +417,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
 
 .section-about {
   width: 100%;
-  
+
   padding: 50px 0 100px 0;
   @include gradientD2(#FFF8B3, #FFA9B8);
 
@@ -448,7 +452,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
     }
     &.visible {
       flex: 0 0 500px;
-      box-shadow: rgba(0,0,0,0.04) 0px 4px 20px 5px;  
+      box-shadow: rgba(0,0,0,0.04) 0px 4px 20px 5px;
       .about-panel {
         @include opacity(1);
       }
@@ -479,10 +483,10 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
   .about-panel {
     position: relative;
     @include transition(0.6s all ease);
-    
+
     &.animation {
       flex: 1;
-      height: 100%; 
+      height: 100%;
       width: 100%;
       @include flex(center, center, column);
 
@@ -513,7 +517,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
             width: 150%;
             text-align: center;
             color: rgba(255,255,255,0.8);
-            
+
           }
 
           &:hover {
@@ -534,7 +538,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
             background-size: 100% 100%;
             cursor: default;
           }
-          
+
           &#mobile-1 {
             top: 55px;
             left: 7px;
@@ -545,7 +549,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             @include opacity(0);
-   
+
           }
           &#mobile-2 {
             top: 27px;
@@ -555,7 +559,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
             background-image: url("../img/ui-animation/mobile-2.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            
+
           }
           &#mobile-3 {
             top: 27px;
@@ -565,7 +569,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
             background-image: url("../img/ui-animation/mobile-1.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            
+
           }
         }
 
@@ -589,7 +593,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
               @include transform($scale $translate-3-hover $rotate-hover);
             }
           }
-          
+
           &#mobile-2 {
             @include transform($translate-2 $rotate);
             &:hover {
@@ -602,7 +606,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
               @include transform($scale $translate-1-hover $rotate-hover);
             }
           }
-          
+
         }
       }
 
@@ -768,6 +772,14 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
     background: url("../img/works/09-travelhacks/preview.jpg") center center no-repeat;
     background-size: cover;
   }
+  &.poolr {
+    background: url("../img/works/13-poolr/preview.png") center center no-repeat;
+    background-size: cover;
+  }
+  &.youcollab {
+    background: url("../img/works/14-youcollab/preview.png") center center no-repeat;
+    background-size: cover;
+  }
 }
 
 .section-contact {
@@ -846,7 +858,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
         padding: 0;
         margin: 0;
         margin-bottom: 30px;
-        
+
         @include transition(0.5s all ease);
         @include transform(rotate(45deg));
         background: rgba(0,0,0,0.2);
@@ -868,7 +880,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
         width: 100%;
         @include flex(top, center, row);
         padding-top: 50px;
-        padding-bottom: 50px; 
+        padding-bottom: 50px;
         margin-top: 30px;
         border-top: 1px solid rgba(0,0,0,0.1);
         border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -878,7 +890,7 @@ $translate-3-hover: translate3D($left *  1, $top * 1 + $t , 0);
         .col-role {
           flex: 0 0 230px;
           height: 100%;
-          
+
           @media only screen and (max-width: 750px) {
             width: 100%;
             flex: 0 0 auto;

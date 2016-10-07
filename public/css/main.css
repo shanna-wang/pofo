@@ -320,6 +320,9 @@ section {
       .section-me .container-nav a.email {
         background: url("../img/icon_email.svg") center center no-repeat;
         background-size: 20px auto; }
+      .section-me .container-nav a.dribbble {
+        background: url("../img/icon_dribbble.svg") center center no-repeat;
+        background-size: 23px auto; }
       .section-me .container-nav a:hover {
         -webkit-transform: translateY(10px);
         transform: translateY(10px); }
@@ -776,6 +779,12 @@ section {
     background-size: cover; }
   .works-preview.travelhacks {
     background: url("../img/works/09-travelhacks/preview.jpg") center center no-repeat;
+    background-size: cover; }
+  .works-preview.poolr {
+    background: url("../img/works/13-poolr/preview.png") center center no-repeat;
+    background-size: cover; }
+  .works-preview.youcollab {
+    background: url("../img/works/14-youcollab/preview.png") center center no-repeat;
     background-size: cover; }
 
 .section-contact a {
