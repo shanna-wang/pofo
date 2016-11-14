@@ -304,6 +304,10 @@ html {
   height: 500px; }
   .section-powerups .section-wrapper {
     padding-top: 70px; }
+  @media only screen and (min-width: 900px) {
+    .section-powerups .layout-twothirds-right {
+      margin-left: 515px;
+      width: 385px; } }
   .section-powerups .powerups-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -369,7 +373,7 @@ html {
 a.button-light-blue, a.button.button-light-blue {
   background: #00AECC;
   box-shadow: 0 2px 0 #0098B7;
-  color: white;
+  color: white !important;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease; }
   a.button-light-blue:hover, a.button.button-light-blue:hover {

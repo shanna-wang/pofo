@@ -462,6 +462,12 @@ html {
 	.section-wrapper {
 		padding-top: 70px;
 	}
+	@media only screen and (min-width: 900px) {
+		.layout-twothirds-right {
+	    margin-left: 515px;
+	    width: 385px;
+		}
+	}
 	.powerups-container {
 		display: flex;
 		justify-content: center;
@@ -524,7 +530,7 @@ a.button-light-blue, a.button.button-light-blue {
 
 	background: $sky-600;
   box-shadow: 0 2px 0 $sky-700;
-	color: white;
+	color: white !important;
 	transition: 0.3s all ease;
 
 	&:hover {
