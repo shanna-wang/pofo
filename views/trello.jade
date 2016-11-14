@@ -1,0 +1,299 @@
+extends ./layouts/trello
+
+block content
+
+
+  .global-header.u-clearfix
+    .global-header-section.mod-left
+      a.global-header-section-logo.mod-black(href='/home')
+        img.global-header-section-logo-image(alt='Home', src='https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/trello-header-logos/1c3a2d636e34d62a6cb27d83e5e6956b/trello-logo-black.svg')
+    .global-header-section.mod-right
+      a.global-header-section-button(href='/') Log In
+      a.global-header-section-button.button-light-blue(href='/') Sign Up
+  section.section-header
+    .bg-grid
+    .bg-mountain
+    .section-wrapper.layout-grid-frame
+      .layout-twothirds-center
+        h2 Marketing Playbook
+        p See how Marketers are using Trello.
+        br
+        br
+        br
+    .grid-container
+      .profile-navigation.center-1
+        .profile.focus
+          img(src='img/profiles/2.jpg')
+        .profile
+          img(src='img/profiles/3.jpg')
+        .profile
+          img(src='img/profiles/4.jpg')
+        .profile
+          img(src='img/profiles/5.jpg')
+      #board-1.board-container.visible
+        .board-header
+          span Jenn's
+          h3 Editorial Calendar
+          a.button.button-light-blue(href='/') Request a Demo
+        .board
+          .list
+            .title Article Ideas
+            .card-container
+              .card Give the Gift of Trello Gold
+              .card Unlimited Labels
+              .card Heritage Bike Shop Case Study
+              .card Roadmapping with a Public Trello Board
+              .card How To Use Trello Like A Pro
+              .card Introducing Power-Ups: Calendar, Card Aging, and More
+          .list
+            .title Researching
+            .card-container
+              .card Wedding Planning With Trello
+              .card Kickstarter case study
+          .list
+            .title On Hold
+            .card-container
+              .card Article
+              .card Article
+              .card Article
+          .list
+            .title Writing
+            .card-container
+              .card Article
+          .list
+            .title Editing and Graphics
+            .card-container
+              .card Article
+              .card Article
+              .card Article
+              .card Article
+              .card Article
+          .list
+            .title Scheduled
+          .list
+            .title Promotion
+          .list
+            .title Ready to Publish
+          .list
+            .title Published
+            .card-container
+              .card Article
+              .card Article
+              .card Article
+              .card Article
+              .card Article
+      #board-2.board-container
+        .board-header
+          span Ryan's
+          h3 Marketing Brainstorm
+          a.button.button-light-blue(href='/') Request a Demo
+        .board
+          .list
+            .title Ideas & Brainstorms
+            .card-container
+              .card Video: Team members share social media tips
+              .card Video: Leo Whiteboard Friday
+              .card Republish content on Linkedin
+              .card Longform content on thought leadership
+              .card Case studies of Buffer customers
+              .card Twitter office hours
+          .list
+            .title Priority Experiments
+            .card-container
+              .card Hangout on Air office hours
+              .card Webinars
+          .list
+            .title Current Experiments
+            .card-container
+              .card Sample (S)
+              .card Start a podcast
+              .card Take 30 days off from the blog
+          .list
+            .title History
+            .card-container
+              .card Facebook Ads - What do you get by spending $5 per day?
+          .list
+            .title Project Ideas and Inspiration
+            .card-container
+              .card http://roadtrip.unbounce.com/
+              .card http://roadtrip.unbounce.com/
+              .card http://roadtrip.unbounce.com/
+              .card http://roadtrip.unbounce.com/
+              .card http://roadtrip.unbounce.com/
+          .list
+            .title Videos to Create
+            .card-container
+              .card a card
+              .card a card
+              .card a card
+      #board-3.board-container
+        .board-header
+          span Shannon's
+          h3 Marketing Sample Board
+          a.button.button-light-blue(href='/') Request a Demo
+        .board
+          .list
+            .title Start Here!
+            .card-container
+              .card Department Rep
+              .card How to use this board
+              .card How we communicate as a team
+          .list
+            .title This Week
+            .card-container
+              .card Role
+              .card Role
+          .list
+            .title Up Next
+            .card-container
+              .card Marketing Team Goals April
+              .card Redesign Blog
+              .card Start a webinar series
+          .list
+            .title On Hold
+            .card-container
+              .card Item
+              .card Item
+              .card Item
+              .card Item
+              .card Item
+              .card Item
+              .card Item
+          .list
+            .title Done
+            .card-container
+              .card Spanish Translation
+      #board-4.board-container
+        .board-header
+          span Mark's
+          h3 Weekly Newsletter #58
+          a.button.button-light-blue(href='/') Request a Demo
+        .board
+          .list
+            .title Meta
+            .card-container
+              .card June 20, 2015
+              .card preview_text
+              .card editors_note
+          .list
+            .title Latest Episode
+            .card-container
+              .card #161: HTTP/2 with Ilya Grigorik
+          .list
+            .title Headlines and Links
+            .card-container
+              .card Mobile is Eating the World
+              .card A Walkthrough of LoopBack, the Node API Framework You've Been Dreaming Of
+              .card HTTP/2 Explained
+              .card Mobile is Eating the World
+              .card A Walkthrough of LoopBack, the Node API Framework You've Been Dreaming Of
+              .card HTTP/2 Explained
+          .list
+            .title Projects and Repos
+            .card-container
+              .card Item
+          .list
+            .title Videos
+            .card-container
+              .card What the heck is Octopress and why should I care?
+          .list
+            .title Member Benefits
+  section.section-tutorials
+    .bg-grid
+    .section-wrapper.layout-grid-frame
+      .layout-twothirds-center
+        h3 Ready to get started?
+        p Check out our in-depth walkthroughs.
+    .tutorial-cards-container
+      .tutorial-card.orange
+        .container-padding
+          span Team Meetings
+          p Keep your weekly stand-ups and debriefs efficient and enjoyable for everyone.
+        .icon
+        .links
+          a.button(href='http://blog.trello.com/give-team-meetings-status-update/', target='_blank') Tutorial
+      .tutorial-card.blue
+        .container-padding
+          span Event Planning
+          p Break your events into manageable phases, and communicate them to your team.
+        .icon
+        .links
+          a.button(href='\
+          http://blog.trello.com/tips-for-event-planners/', target='_blank') Tutorial
+          a.button(href='\
+          https://trello.wistia.com/medias/gzpmzxbrjz', target='_blank') Video
+      .tutorial-card.pink
+        .container-padding
+          span Editorial Calendar
+          p Keep track of your entire editorial pipeline, from ideation to publishing.
+        .icon
+        .links
+          a.button(href='http://blog.trello.com/moved-to-published-using-trello-as-an-editorial-calendar/', target='_blank') Tutorial
+  section.section-powerups
+    .section-wrapper.layout-grid-frame
+      .layout-twothirds-right
+        h2 Work with the tools you know
+        p
+          | Trello makes it easy to power up your work flow. Add another sentence about how awesome power ups are!
+    .powerups-container
+      a.powerup(href=' http://blog.trello.com/a-better-way-to-gather-data-on-email-marketing-campaigns/', target='_blank')
+        img(src='https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/182df5214030e76ce90371bc15f2e7d2/power-up-mailchimp.png')
+        .text
+          span Mailchimp
+          p Attach Mailchimp templates and campaigns directly onto cards.
+      a.powerup(href='http://blog.trello.com/trello-and-google-drive-an-integration-made-in-office-heaven/', target='_blank')
+        img(src='https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/d42977faed4ecaeb1264fdea88bb7b78/power-up-drive.png')
+        .text
+          span Drive
+          p
+            | Show updated information for attached files and folders in Drive directly on your cards.
+      a.powerup(href='http://blog.trello.com/slack-trello-integration-powerup/', target='_blank')
+        img(src='https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png')
+        .text
+          span Slack
+          p Send a Trello card directly to a Slack channel or direct message.
+      a.powerup(href='http://blog.trello.com/crazy-for-calendars/', target='_blank')
+        img(src='https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/373e7752cd7877d10e213555f03c56cf/power-up-calendar.png')
+        .text
+          span Calendar
+          p
+            | Change due dates by dragging cards onto different dates directly in calendar mode.
+      a.powerup(href='http://blog.trello.com/bird-is-the-word-getting-social-with-twitter-and-trello/', target='_blank')
+        img(src='https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/f2cd305c00566651f5abf054ca7d883a/power-up-twitter.png')
+        .text
+          span Twitter
+          p Attach tweets and see all their relevant info directly on your cards.
+      a.powerup(href='http://blog.trello.com/trello_evernote_integration/', target='_blank')
+        img(src='https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/052322ba751ecefb4621385bd3e2b87d/power-up-evernote.png')
+        .text
+          span Evernote
+          p Access and attach your Evernote notes directly from your cards.
+  section
+    .section-wrapper.layout-grid-frame
+      .layout-twothirds-center
+        .layout-centered-content
+          h3 Let Trello help you focus on what you do best
+          a.button.mod-purple(href='/') Get Started
+  footer.global-footer
+    ul.global-footer-list
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='/tour') Tour
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='/pricing') Pricing
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='/platforms') Apps
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='/jobs') Jobs
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='http://blog.trello.com/', target='_blank') Blog
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='http://developers.trello.com') Developers
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='/about') About
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='http://help.trello.com/') Help
+      li.global-footer-list-item
+        a.global-footer-list-item-link(href='/legal') Legal
+    p.global-footer-detail
+      | © Copyright 2016, Trello, Inc. All
+      | rights reserved.

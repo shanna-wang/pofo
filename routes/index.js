@@ -10,6 +10,8 @@ router.get('/challenge', function(req, res, next) {
   res.render('challenge', { title: 'UI Challenge' });
 });
 
-
+router.get('/trello', function(req, res, next) {
+  res.render('trello', { title: 'Trello Playbook' });
+});
 
 module.exports = router;
