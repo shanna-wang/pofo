@@ -198,7 +198,7 @@ html {
 			top: -80px;
 			left: 0;
 			width: 100%;
-			z-index: 2;
+			z-index: 3;
 			border-radius: 5px 5px 0px 0px;
 			.profile {
 				flex: 0 0 auto;
@@ -382,7 +382,7 @@ html {
 		margin: 0 5px;
 		overflow: hidden;
 		position: relative;
-		transition: 0.5s all ease;
+		transition: 0.3s all ease;
 		z-index: 1;
 
 		.container-padding {
@@ -520,7 +520,7 @@ html {
 	}
 }
 
-a.button-light-blue {
+a.button-light-blue, a.button.button-light-blue {
 
 	background: $sky-600;
   box-shadow: 0 2px 0 $sky-700;
