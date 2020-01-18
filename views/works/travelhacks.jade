@@ -1,0 +1,69 @@
+extends ../layouts/pofo-v2
+
+block content
+
+  .container-content#swup
+    .transition-fade
+      nav
+        .container
+          a.back(href="/")
+            img(src='../img/2019/arrow_left.svg')
+            | Back
+          a.logo(href='/')
+
+      .container
+        .work-header-content
+          h1 Travelhacks
+
+    .transition-slide-up.work-body
+
+      .container
+
+        .work-preview
+          img(src='../img/2019/works/travelhacks/mocks/mockup.png')
+
+        .divider
+
+        .body-section
+          .summary-item
+            h2 My Role
+            ul
+              li Organizer
+              li UI Design
+              li Front-end Development
+
+          .summary-item
+            h2 Tools
+            ul
+              li Sketch
+              li Ruby on Rails
+              li Haml/Sass/Jquery
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Context
+          .body-section-content
+            p
+              | I organized a hackathon, hosted at Flatbook (now
+              a.plain(href='https://sonder.com' target='_blank')  Sonder
+              | ) headquarters. As a team, we wanted to get more involved in the local community and rally creatives together around a theme we were all passionate about: travel.
+
+            p Registration was open to all of Montreal, and we ended up having around 40 participants join us for the weekend and come up with some awesome hacks.
+
+            p I was fully in charge of the hackathon's branding, design, website, and logistical planning throughout the days leading up to the event.
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Website
+          .body-section-content
+
+            .img-container.outline
+              .caption Landing Page.
+              img(src='../img/2019/works/travelhacks/mocks/1.jpg')
+
+
+        .divider

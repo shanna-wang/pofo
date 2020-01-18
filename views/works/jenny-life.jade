@@ -1,0 +1,48 @@
+extends ../layouts/pofo-v2
+
+block content
+
+  .container-content#swup
+    .transition-fade
+      nav
+        .container
+          a.back(href="/")
+            img(src='../img/2019/arrow_left.svg')
+            | Back
+          a.logo(href='/')
+
+      .container
+        .work-header-content
+          h1 Jenny Life Insurance
+
+    .transition-slide-up.work-body
+
+      .container
+
+        .work-preview
+          img(src='../img/2019/works/jenny-life/mocks/mockup.png')
+
+
+        .divider
+
+        .body-section
+          .summary-item
+            h2 My Role
+            ul
+              li Branding
+              li UX Design
+              li UI Design
+
+          .summary-item
+            h2 Tools
+            ul
+              li Sketch
+              li Principle
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Title
+          .body-section-content
+            p lorem ipsum

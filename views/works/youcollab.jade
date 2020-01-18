@@ -1,0 +1,85 @@
+extends ../layouts/pofo-v2
+
+block content
+
+  .container-content#swup
+    .transition-fade
+      nav
+        .container
+          a.back(href="/")
+            img(src='../img/2019/arrow_left.svg')
+            | Back
+          a.logo(href='/')
+
+      .container
+        .work-header-content
+          h1 Youcollab
+
+    .transition-slide-up.work-body
+
+      .container
+
+        .work-preview
+          img(src='../img/2019/works/youcollab/mocks/mockup.png')
+
+        .divider
+
+        .body-section
+          .summary-item
+            h2 My Role
+            ul
+              li UI Design
+              li Interaction Design
+
+          .summary-item
+            h2 Tools
+            ul
+              li Sketch
+              li Pixate
+
+        .divider
+
+        .body-section
+
+          .body-section-title
+            h2 Context
+          .body-section-content
+            p YouCollab is a platform where content creators on YouTube can connect in a Tinder-like interface to find other people with similar content or followings to collaborate with.
+
+            p I created the swiping experience where users decide whether or not they want to be matched with a potential collaborator.
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Designs
+          .body-section-content
+            p In order for the experience to work similarly to Tinder and have the same addictive engagement, creators needed to be able to make quick decisions as to whether or not they wanted to collab with another creator. I wanted to incorporate a short auto-playing video biography to help users showcase their personality.
+            p Because the users would be existing content creators, my hypothesis was that a video bio wouldn't create as much onboarding friction for them as it would for regular users. (Having the opportunity to conduct research to validate this would be a good step to iterate on this experience!)
+
+            .img-container.outline
+              .caption Portrait view.
+              .multiple.desktop
+                img(src='../img/2019/works/youcollab/mocks/m01.png')
+                img(src='../img/2019/works/youcollab/mocks/m02.png')
+
+
+            .img-container.outline
+              .caption Landscape view, brings focus to the video.
+              img(src='../img/2019/works/youcollab/mocks/m03.png')
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 Interaction
+          .body-section-content
+
+            p I used Pixate to create an interactive prototype to help my client prove this concept.
+
+            video.small(controls controlslist='nodownload' disablePictureInPicture loop)
+              source(src='../img/2019/works/youcollab/mocks/prototype.mp4', type='video/mp4')
+              source(src='movie.ogg', type='video/ogg')
+              | Your browser does not support the video tag.
+
+        .divider
+

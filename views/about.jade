@@ -1,0 +1,47 @@
+extends ./layouts/pofo-v2
+
+block content
+
+  .container-full#swup
+
+    .transition-container-slide-out.container-background
+      .transition-pane-slide-out.panel
+      .transition-pane-slide-out.panel
+      .transition-pane-slide-out.panel
+
+    .transition-fade.container
+      include ./includes/top.jade
+
+      .about-me
+        .about-head
+          //- img(src="../img/2019/photo.png")
+
+        .about-body
+          h3 Hi, I'm Shanna. I wear a lot of hats. &#128075;
+
+          p I'm a product designer and creative strategist. My educational background is in computer science, and I'm also deeply passionate about CSS. I love solving problems and crafting meaningful solutions, for both businesses and end users.
+
+          p Drop me a line if you're working on something cool. I'd love to collaborate.
+
+        .about-elements
+          .element
+            img(src='../img/2019/icon_strategy.svg')
+            h3 Strategy
+
+          .element
+            img(src='../img/2019/icon_product.svg')
+            h3 Product
+
+          .element
+            img(src='../img/2019/icon_visual.svg')
+            h3 Visual
+
+          .element
+            img(src='../img/2019/icon_dev.svg')
+            h3 Build
+
+        a.button(href='/contact')
+          | Get in touch
+          img(src='../img/2019/arrow_right.svg')
+
+      include ./includes/footer.jade

@@ -1,0 +1,78 @@
+extends ../layouts/pofo-v2
+
+block content
+
+  .container-content#swup
+    .transition-fade
+      nav
+        .container
+          a.back(href="/")
+            img(src='../img/2019/arrow_left.svg')
+            | Back
+          a.logo(href='/')
+
+      .container
+        .work-header-content
+          h1 Zambah
+
+    .transition-slide-up.work-body
+
+      .container
+
+        .work-preview
+          img(src='../img/2019/works/zambah/mocks/mockup.png')
+
+        .divider
+
+        .body-section
+          .summary-item
+            h2 My Role
+            ul
+              li UI Design
+
+          .summary-item
+            h2 Tools
+            ul
+              li Sketch
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Context
+          .body-section-content
+            p Zambah is a platform that connects artists with influencers.
+
+            p I created a marketing landing page for them based off their existing brand colours.
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Wireframe
+          .body-section-content
+
+            .img-container.small.outline
+              .caption Landing page content.
+              img(src='../img/2019/works/zambah/process/wireframe.png')
+
+        .body-section
+          .body-section-title
+            h2 Designs
+          .body-section-content
+
+            .img-container.outline
+              .caption Landing page (desktop and mobile).
+              .multiple.desktop-mobile
+                img(src='../img/2019/works/zambah/mocks/landing_d01.png')
+                img(src='../img/2019/works/zambah/mocks/landing_m01.png')
+
+        .divider
+
+        .body-section
+          a(href='https://zambah.com/')
+            h2
+              | Check out the live site
+              img(src='../img/2019/arrow_right_black.svg')
+
+        .divider

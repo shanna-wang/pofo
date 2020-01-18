@@ -1,0 +1,378 @@
+extends ../layouts/pofo-v2
+
+block content
+
+  .container-content#swup
+
+
+
+    .transition-fade
+      nav
+        .container
+          a.back(href="/")
+            img(src='../img/2019/arrow_left.svg')
+            | Back
+          a.logo(href='/')
+
+      .container
+        .work-header-content
+          h1 College League of Legends
+
+    .transition-slide-up.work-body
+
+
+
+
+
+      .container
+
+        .work-preview
+          img(src='../img/2019/works/college-lol/mocks/mockup.png')
+
+        //- a.back-to-top(href='#')
+        //-   img(src='../img/2019/arrow_top.svg')
+        //-   | Back to top
+
+
+        .divider
+
+        .body-section
+          .summary-item
+            h2 My Role
+            ul
+              li Product Strategy
+              li UX Design
+              li UI Design
+
+          .summary-item
+            h2 Tools
+            ul
+              li Sketch
+
+
+        .divider
+        .work-logos
+          img(src='../img/2019/works/college-lol/mocks/logo_riot.svg')
+          img(src='../img/2019/works/college-lol/mocks/logo_battlefy.svg')
+
+        .body-section
+          .body-section-title
+            h2 Context
+          .body-section-content
+            p Riot’s title game, League of Legends (LoL), has been spreading its reach worldwide over the past decade, amassing over 27 million daily players. It has especially garnered a lot of attention in the collegiate space, with hundreds of schools across North America forming official clubs and teams to compete at the national level. As a platform for hosting online tournaments, Battlefy has partnered with Riot Games to deliver the official College League of Legends experience: an annual competition offering millions of dollars in student scholarship prizing.
+
+            p Over the course of 4 weeks, I worked with a team of one PM and three software engineers to deliver the registration and team management experience for the 2020 season of College League of Legends.
+
+
+        //- .divider
+        //- .body-section
+        //-   a(href='#')
+        //-     h2
+        //-       | Skip the case study, take me to the final designs!
+        //-       img(src='../img/2019/arrow_right_black.svg')
+
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 Goals
+          .body-section-content
+            p Riot’s goal to foster varsity competition for League of Legends remained mostly generalized throughout the years. Their focus was largely on growing the number of participating schools from year to year, and delivering a player experience that upheld competitive integrity.
+
+            p For Battlefy, the stakes were higher. Battlefy had partnered with Riot the year before to deliver the 2019 College LoL experience. The tight deadlines at the time prevented the team from being able to productize the experience &mdash; the backend was too rigid, and the user experience was unintuitive (or for admin tools, not considered at all).
+
+            p As a team, our goal was not only to create a simpler, more delightful user experience, but also to design the leagues product so this format of competition and its administrative tools could be used to support future competitions of this nature, and not just collegiate leagues.
+
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 The scope
+          .body-section-content
+            p Most of our requirements came directly from Riot, in the form of a rigid ruleset. For this first sprint of the project, our deliverables included the following:
+
+            ul
+              li An informational portal
+              li An invitation system into the league
+              li Registration and creation of school teams
+              li Registration of team members
+              li Management of team members
+              li Administrative tools to approve and manage members
+
+            p Future sprints would span the entire online playing experience of the tournament, match rescheduling, round progression, and fantasy drafts. I knew it was important that the designs I created would be able to account for those features, too.
+
+
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 Our users
+          .body-section-content
+            h5 Players (college students)
+
+            p I wanted to make sure we understood the priorities and goals of our main users, but I kept the research light due to limitations in time. I conducted two in-depth interviews from one of the participating college clubs: one with an executive-level staff member, and one with a regular member.
+
+            p What I learned was that within school clubs, the roles amongst the students were a bit more nuanced than we'd thought:
+
+            ul
+              li
+                b Staff members
+                | , who liked to follow the roster, but more in a “verifying” capacity to make sure the right people were on the team.
+              li
+                b Team captains
+                | , who were viewed as “leaders” or shot-callers. They organized everything for the team, from practice sessions to friendly scrimmages.
+              li
+                b Team members
+                | , who basically just showed up every week to play.
+
+            p For college students, I needed to put the focus on efficiency and clarity &mdash; students are super busy, and their weekly scheduled College LoL matches were a small part of their busy, varied schedules. It was important for them to know immediately what their next step was, and how to get into their matches as quickly as possible with the right information.
+
+            h5 League administrator
+
+            p Administrators/organizers are a notoriously under-served persona within Battlefy as a whole (players always take priority when the time crunch inevitably hits). I wanted to avoid falling into this pattern, and worked with the PM to secure an additional dev resource to help us out. This was the first time any design considerations had been extended to admins, and I wanted to lay a good foundation for their workflow.
+
+            p For College LoL specifically, there was going to be a single administrator overseeing the entirety of the league (hi John). We sat down and brainstormed together on what worked and what didn’t from the year before, and what his workflow looked like end-to-end. Considering that he'd be getting thousands of registrations within the first month, this tool has to be both efficient and flexible in order to be successful.
+
+            p The league administrator also acts as support for players throughout the league, through Battlefy's discord channel. Issues from last year were the only real insight I had into user feedback, so we went through the list and prioritized them by frequency. Some frustrations included:
+
+            ul
+              li
+                b Confusing navigation.
+                br
+                | It wasn’t clear how to navigate between the portal and the team management functionality, which was tucked into Battlefy’s “Player Guide”, a full-screen modal that took over the page from a bar stickied to the bottom. The transition was abrupt, and deeplinks into the player guide made navigating back to the portal unintuitive.
+              li
+                b Lack of information.
+                br
+                | There was not enough information on the portal pertaining to bracket structures and overall stages of the competition, leaving players confused as to how they would progress and when/whom they'd be playing.
+              li
+                b Unclear registration instructions.
+                br
+                | Thousands of players last year ended up having to re-submit their signed waivers due to inputting the wrong information the first time around.
+              li
+                b Poor admin tool UI.
+                br
+                | The UI looked like a data dump from the developers, with lots of irrelevant or poorly formatted fields. Because the UI was so cluttered, it was very easy for the admin to misclick and perform the wrong action.
+
+            h5 Spectators
+
+            p This was a broad persona that wasn't mutually exclusive from the previous two, but it was important for our product team to consider spectators as their own user-type. Besides players and admins, this persona also encapsulated:
+            ul
+              li
+                b General club members
+                | , who only played casually within the club and weren't part of the official College LoL team, but might want to follow their school's progress.
+              li
+                b Family and friends
+                | , personal connections of team members who were involved in College LoL.
+              li
+                b The League of Legends community
+                | , players of LoL who were interested in following the collegiate scene.
+              li
+                b Scouts
+                | , coaches and recruiters for professional teams who wanted to scope out the collegiate talent.
+            p For College LoL, we knew this was going to be an incredibly minor persona, because collegiate play is still in its early days of trying to gain traction across mainstream channels.
+            p However, making online competitive play, progression, and standings easy to follow and spectate was definitely on our product team's radar; our hypothesis was that this would increase overall engagement with tournaments and leagues, and not just at the pro level. Because we were setting the foundations for what would be a keystone feature of Battlefy, we wanted to make sure we were designing with spectators in mind.
+
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 Design process
+          .body-section-content
+            h5 Architecture
+            p Prior to College LoL, individual tournaments on Battlefy were relatively simple in concept. There was no limit to how many brackets could be in a tournament, nor was there any kind of scheduling for matches.
+
+            .img-container.small
+              img(src='../img/2019/works/college-lol/process/architecture-01.png')
+              .caption A basic tournament structure.
+
+            p  With leagues, we wanted to create a narrative that would be able to connect multiple tournaments and make progression between them more meaningful and engaging. More broadly, our product goals were to create more of a sense of community within leagues, and ultimately strengthen the connection between league organizers and their players.
+
+            p This meant we needed to create that progression from bracket to bracket, and have set schedules for matches so anyone could follow the progress of a tournament.
+
+            p The evolved structure looked a little more like this:
+
+
+            .img-container.small
+              img(src='../img/2019/works/college-lol/process/architecture-02.png')
+              .caption Leagues tournament structure.
+
+
+            h5 Overview
+
+            p I created a user journey to help visualize how all the parts of a league would come together for each of the personas (everything within the scope of this project is highlighted).
+
+            .img-container
+              img(src='../img/2019/works/college-lol/process/flow-01.png')
+              .caption High-level user journey.
+
+            p The league landing page would tell the overarching story of the organizer, and why this league was founded. The season portal would contain all the information relevant to this year's competition, complete with bracket formats, round schedules, and standings, mostly targeted to a spectator’s perspective. Depending on whether you were a player or an administrator, you would be directed to the context relevant to you (something spectators wouldn't have access to).
+
+            h5 i) Season portal and Player/Admin Context Navigation
+
+            p The portal was going to act as the "home" page for the entire College LoL experience. I wanted to keep the information presented here general, so that anyone looking at this page would be able to make sense of the messaging and follow the season's progress.
+
+            p The portal itself needed an internal navigation for the three major buckets of information relevant during the league:
+            ul
+              li
+                b Details
+                | : Information about the season, important dates, competition rules, etc.
+              li
+                b Teams
+                | : A searchable list of the teams and schools participating, as well as their roster members.
+              li
+                b Standings
+                | : The scores of each team from week to week, and how they stack up against each other.
+
+            p I wanted to create a pattern that would make specific information easy to find for players and admins, so I created a different context for them that would be accessible from the portal, but only visible to the right persona.
+
+            .img-container.small
+              img(src='../img/2019/works/college-lol/process/player-guide-01.png')
+              .caption Preliminary wireframes for pulling up admin/player contexts.
+
+            p Portal internal navigation would be laid out horizontally in desktop view, but stickied to the bottom in mobile for easier reach.
+            p A sticky bar with a bold, bright call to action (CTA) would live at the bottom of the screen, visible only to players and admins. Clicking it would pull up the Player Guide or the Admin Panel. I wanted the top banner across all three states to include prominent LoL splash imagery, so no matter which state the player/admin was in, the context of their view was clear. There would always be a prominent button to return the player/admin to the initial portal state.
+            p In mobile, the CTA bar would sticky to the bottom above the portal navigation. In the open view I decided to sacrifice the league context to save on screen real estate, with the Player Guide expanding to overtake the full screen.
+
+            p This was an iteration of what I envisioned that interaction looking like:
+
+            video.medium(controls controlslist='nodownload' disablePictureInPicture loop)
+              source(src='../img/2019/works/college-lol/process/player-guide-02.mp4', type='video/mp4')
+              source(src='movie.ogg', type='video/ogg')
+              | Your browser does not support the video tag.
+
+            p (The interaction would continue to evolve as I paired with the front-end developer to fine-tune animation speeds, container heights, and which sections would scroll and which wouldn't.)
+
+            p The season portal would be white-labelled to the branding of League of Legends, because we wanted to leverage the emotional connections players already had, but the modules would be developed in a way that made asset swapping simple for future leagues from different brands. Flows within the Player Guide and Admin Panel would use Battlefy's internal Comet Design System to start building familiarity and consistency within the Battlefy platform.
+
+            .img-container
+              .caption Portal mockups for desktop and mobile.
+              .multiple.desktop-mobile
+                img(src='../img/2019/works/college-lol/mocks/portal_d.png')
+                img(src='../img/2019/works/college-lol/mocks/portal_m.png')
+
+            .img-container
+              .caption Mobile portal states, including empty states and the open player guide.
+              .multiple.mobile
+                img(src='../img/2019/works/college-lol/mocks/portal_m02.png')
+                img(src='../img/2019/works/college-lol/mocks/portal_m03.png')
+                img(src='../img/2019/works/college-lol/mocks/portal_m04.png')
+                img(src='../img/2019/works/college-lol/mocks/portal_m05.png')
+
+
+            h5 ii) Registration and Season Invites
+
+            p Registration to College LoL was private. We wanted to create an invitation system that was general enough that it could be adapted to other leagues with public registrations, but specific enough to meet Riot's needs.
+
+            .img-container
+              img(src='../img/2019/works/college-lol/process/registration-01.png')
+              .caption User journey for registering to College LoL 2020.
+
+            p We decided to target the Team Captain persona as the person who would be in charge of creating the team. All other staff or team members would be invited into the league by the captain, after the team was already created. This was our attempt to mitigate any concurrency problems of multiple team members trying to create a team. However, because the initial invite would be sent out by Riot via email, we had no real control over who saw and could access the initial invite link. This meant it was really important that the invitation screens had proper messaging so users could self-identify.
+
+            p Because players and staff had very different registration requirements, I decided to also have members select their persona type at the start of the flow. This would allow the messaging within the flow to be much better targeted to the specific member type.
+
+            .img-container
+              .caption Invitation screens for team captain vs. team member.
+              .multiple.desktop
+                img(src='../img/2019/works/college-lol/mocks/invite_01.png')
+                img(src='../img/2019/works/college-lol/mocks/invite_02.png')
+
+            p I wanted to design the registration steps for scale, since we wanted to be able to adapt it to any league, with varying requirements. Ultimately I settled on this layout, opting to lay the steps out vertically so this registration flow could scale.
+
+            .img-container.small
+              img(src='../img/2019/works/college-lol/process/registration-02.png')
+              .caption Registration step wireframes.
+
+
+            .img-container
+              .caption Registration for desktop and mobile, step 3.
+              .multiple.desktop-mobile
+                img(src='../img/2019/works/college-lol/mocks/registration_d3.png')
+                img(src='../img/2019/works/college-lol/mocks/registration_m3.png')
+
+
+            h5 iii) Team Management and Admin Panel
+
+            p For the management experiences of both league administrators and team members with manager-level permissions, the most important consideration for the components designed were
+              b  reusability
+              |  and
+              b  scalability
+              | .
+
+            p These views would be data-heavy, so I wanted to create a table row pattern that could easily be adapted to display any object type. I wanted to be able to account for both general and destructive actions.
+
+            p Although it wasn't a priority for this project, I didn't want to compromise on mobile responsiveness, especially with more and more incoming requests from admins for mobile support on their tools.
+
+            .img-container
+              .caption Editable table row states.
+              .multiple.desktop-mobile
+                img(src='../img/2019/works/college-lol/mocks/admin_01.png')
+                img(src='../img/2019/works/college-lol/mocks/admin_02.png')
+
+            p I opted for a manual edit/save toggle to go between edit and read-only states, as opposed to having everything be editable with auto-save. The extra click would help prevent accidental database changes, and made copying and pasting information a little easier, which was a strong use case. In desktop, the fields would change in-place to their editable states, while in mobile, tapping the edit icon would expand the row to reveal the editable fields.
+
+            p I hid the actions to the right under a dropdown, with destructive actions visually separated from general actions. All destructive actions would trigger a modal with a secondary confirmation.
+
+            .img-container
+              .multiple.desktop
+                img(src='../img/2019/works/college-lol/mocks/admin_modal1.png')
+                img(src='../img/2019/works/college-lol/mocks/admin_modal2.png')
+              .caption Confirmation modals for destructive actions.
+
+            p The destructive action is on the right and highlighted as the primary action. I liked that our primary colour, red, helped to reinforce the destructiveness of this option, and potentially gave admins more pause before selecting it.
+
+            .img-container
+              .multiple.desktop
+                img(src='../img/2019/works/college-lol/mocks/admin_tool1.png')
+                img(src='../img/2019/works/college-lol/mocks/admin_tool2.png')
+              .caption League admin tool in action, with pagination.
+
+            .img-container
+              img(src='../img/2019/works/college-lol/mocks/admin_search.png')
+              .caption League admin tool search query (autocompletes, and acts as a filter).
+
+            .img-container
+              .multiple.desktop
+                img(src='../img/2019/works/college-lol/mocks/team_member.png')
+                img(src='../img/2019/works/college-lol/mocks/team_management.png')
+              .caption Team view for members vs managers.
+
+
+            .img-container
+              .multiple.desktop
+                img(src='../img/2019/works/college-lol/mocks/admin_approval1.png')
+                img(src='../img/2019/works/college-lol/mocks/admin_approval2.png')
+              .caption League admin approval tool for registrations.
+
+
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 QA, testing, and documentation
+          .body-section-content
+            p The design and development for this project ran almost concurrently due to time constrictions. Our front-end developer was already putting prototypes together from hand-drawn wireframes and adding final touches as I prepared the high-fidelity mockups. Internal testing and QA were conducted in parallel as components were completed, and once a week the entire team came together for end-to-end testing to keep the project on track.
+
+            p The final steps for this project were to document the guidelines and best practices for all the components created in Comet, Battlefy's small (but growing!) design system.
+
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 Impact
+          .body-section-content
+            p Registration for the league had just opened when I transitioned off this project, so I don't have any numbers to report for this experience. But already, there's been a couple of wins:
+
+            ul
+              li During the first day of registration, over 80 schools registered, and the support channel for College LoL was quiet as a mouse. There were zero(!) user issues, while last year’s registration launch had our admins working overtime dealing with the influx of questions and problems from registrants.
+              li Another client project kicked off almost immediately after this one, and that team was able to hit the ground running by adapting our registration and management components to their project requirements. A single developer was able to put together the entire scope of this project in under a week, freeing up the rest of the team to build on the next phase of the leagues product (the playing experience).
+
+        .divider
+
+        .body-section
+          a(href='https://battlefy.com/leagues/collegelol/seasons/2020')
+            h2
+              | Check out the live portal
+              img(src='../img/2019/arrow_right_black.svg')
+
+        .divider

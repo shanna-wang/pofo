@@ -1,13 +1,19 @@
-extends ./layouts/layout
+extends ./layouts/pofo-v2
 
 block content
 
-  include ./includes/me.jade
+  .container-full#swup
+
+    .transition-container-slide-out.container-background
+      .transition-pane-slide-out.panel
+      .transition-pane-slide-out.panel
+      .transition-pane-slide-out.panel
+
+    .transition-fade.container
+      include ./includes/top.jade
+      include ./includes/header.jade
+
+      include ./includes/works.jade
 
 
-  include ./includes/about.jade
-
-  include ./includes/works.jade
-
-  include ./includes/works-details.jade
-  
+      include ./includes/footer.jade
