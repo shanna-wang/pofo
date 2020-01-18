@@ -93,7 +93,7 @@ const passwordProtected = function(options) {
 }
 
 const config = {
-  password: "p",
+  password: "atlas",
   maxAge: 20000000
 }
 
