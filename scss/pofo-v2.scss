@@ -42,6 +42,9 @@ $grey:                #424854;
 $grey-blue:           #4F5D7A;
 
 /////   BASE   /////
+html {
+  scroll-behavior: smooth;
+}
 
 html, body {
   padding: 0;
@@ -429,6 +432,11 @@ a.work-item {
 
   width: 48%;
   padding: 15px;
+
+  @media only screen and (max-width: 700px) {
+    margin: 2%;
+    width: 96%;
+  }
 
   img {
     width: 100%;
@@ -931,32 +939,7 @@ form {
     }
   }
 
-  a.back-to-top {
-    z-index: 1;
-    position: fixed;
-    top: 50px;
-    right: 50px;
 
-    color: black;
-    opacity: 0.6;
-    transition: 0.5s all ease-out;
-    transform: none;
-
-    img {
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &.hidden {
-      transform: translateY(-10px);
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
 
   .body-section {
     width: 100%;

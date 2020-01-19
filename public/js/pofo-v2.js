@@ -22,10 +22,9 @@ function init() {
       };
     });
 
-    // $('.back-to-top').click(function() {
-    //   window.scrollTo({top: 0, behavior: 'smooth'});
-    //   $(this).addClass('hidden');
-    // });
+    $('.back-to-top').click(function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
 
     // // $(window).scroll(function(){
     // //   if ($(this).scrollTop() > 500) {

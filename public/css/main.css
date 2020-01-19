@@ -26,6 +26,9 @@
   font-family: 'Playfair-300';
   src: url("../fonts/Playfair-Display/PlayfairDisplay-Regular.ttf") format("truetype"); }
 
+html {
+  scroll-behavior: smooth; }
+
 html, body {
   padding: 0;
   margin: 0;
@@ -285,6 +288,10 @@ a.work-item {
   background: #232935;
   width: 48%;
   padding: 15px; }
+  @media only screen and (max-width: 700px) {
+    a.work-item {
+      margin: 2%;
+      width: 96%; } }
   a.work-item img {
     width: 100%; }
   a.work-item p {
@@ -580,24 +587,6 @@ form {
     @media only screen and (max-width: 701px) {
       .work-body .container {
         margin-top: -200px; } }
-  .work-body a.back-to-top {
-    z-index: 1;
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    color: black;
-    opacity: 0.6;
-    transition: 0.5s all ease-out;
-    transform: none; }
-    .work-body a.back-to-top img {
-      display: block;
-      margin-bottom: 15px; }
-    .work-body a.back-to-top:hover {
-      opacity: 1; }
-    .work-body a.back-to-top.hidden {
-      transform: translateY(-10px);
-      opacity: 0;
-      pointer-events: none; }
   .work-body .body-section {
     width: 100%;
     display: flex;
