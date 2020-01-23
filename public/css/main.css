@@ -633,6 +633,8 @@ form {
       .work-body .body-section .body-section-content p {
         font-size: 18px;
         line-height: 28px; }
+      .work-body .body-section .body-section-content video {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
       .work-body .body-section .body-section-content .img-container, .work-body .body-section .body-section-content video {
         width: 100%;
         margin: 40px auto;

@@ -37,17 +37,21 @@ block content
             h2 Tools
             ul
               li Sketch
-              li Principle
+              li Framer X
 
         .divider
+
+        .work-logos
+          img(src='../img/2019/works/sales-life/process/logo.png')
 
         .body-section
           .body-section-title
             h2 Context
           .body-section-content
-            p The Sales Life App is a tool built for field sales representatives to enhance their workflow while on the road chasing leads or maintaining client relationships.
 
-            p I worked with my client to research and validate an initial hypothesis, and together we came up with a plan to develop and MVP. I designed and prototyped the tablet and mobile experiences for this app.
+            p Gensquared is a big data company that uses AI to surface customer insights for their clients, to help maximize their sales. My client was a tech lead there, and wanted to explore a product solution targeted specifically at field sales representatives, that he could take to market and scale.
+
+            p Together, we worked to research the user needs, and came up with a plan to develop an MVP. I designed and prototyped the tablet and mobile app experiences for a CMS with scheduling features and a recommendation system.
 
         .divider
 
@@ -55,15 +59,9 @@ block content
           .body-section-title
             h2 The problem
           .body-section-content
-            p My client came to me initially with a problem: that field sales representatives were incredibly underserved in their market, with few enterprise-level tools that specifically targeted them and their needs while out on the road.
+            p Sales people want to be as effective as possible with their time. A huge part of their day is spent working with large amounts of customer data, trying to draw insights from it to either find new leads or upsell existing customers.
 
-            p Two of their biggest pain points were:
-
-            ul
-              li Sales reps needed to access accurate customer data in a timely fashion. Customer data was often stored in multiple systems, or required extra external data to be valuable.
-              li Sales reps needed the ability to pull insights from the data. Interpreting data was time consuming, and often required a specific skill set.
-
-            p Being in the big data industry, my client wanted to create a platform with AI-driven recommendations to take the guesswork out of customer insights, and help sales representatives be more effective.
+            p For field sales reps, an added challenge is that a huge part of their week is spent traveling on the road, getting from one customer location to another. Often these visits are for potential leads, and a lot of research needs to be done beforehand to identify the opportunity, and form a sales strategy.
 
         .divider
 
@@ -71,5 +69,243 @@ block content
           .body-section-title
             h2 Research
           .body-section-content
-            p
+            p Because Gensquared already had business contacts in mind to sell to, I got to speak directly to the sales reps who would potentially be using the product. I ended up chatting with 11 people in total, to deep dive into their existing workflow, the tools they used, and the pain points they currently had.
 
+            p Here were the key insights:
+
+            ul
+              li
+                b Planning and research was always done ahead of time.
+                |  There was little to no time to plan or research while traveling on the roa in their cars. Users reported spending at least an hour on weekends planning routes, and finding and prioritizing leads.
+              li
+                b Internet access was limited and inconsistent while on the road.
+              li
+                b Sales reps were using up to ten different tools to get all the information they needed.
+                |  These included CMS systems, calendars, maps, and note-taking applications (when internet was spotty). On tablet and mobile, the context-switching is messy, and the official CMS systems often didn't get updated with new information.
+              li
+                b When selecting leads to visit, geography is the most important factor, followed by sale potential.
+                |  Maintaining existing customers also generally took priority over new customer acquisition and expansion. Users also admitted to not having the time, skill, or resources to effectively research new leads.
+
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 The MVP
+          .body-section-content
+            p There were pain points across both the planning and execution phase for almost every user. To really maximize the sales rep's time, we wanted to not only make their time spent planning more efficient and effective, but we also wanted to ease some of their execution pains.
+
+            p We liked the idea of packaging the entire experience into a single app, designed to support offline data entry and download relevant customer data. My client would sell the experience as a package to businesses where the majority of sales had to be done in-person, with sales reps who had limited time to research their own customer insights.
+
+            p Ultimately, these were the product features we landed on for our CMS tool:
+
+            ul
+              li
+                b A geography-based scheduling tool
+                |  to let sales reps plan their week.
+              li
+                b A feedback section
+                |  to record how customer touchpoints progress.
+              li
+                b  A notification-based recommendation system
+                |  that surfaces leads, tailored to fit their existing travel routes, and next-best customer actions that are digestible and relevant.
+              li
+                b Curated customer data and analytics screens
+                |  that prioritize forward-looking insights.
+              li
+                b Personalized statistics and quarterly sales data
+                |  to track and improve the sale rep's own KPI's.
+
+            p Priority for proof-of-concept would be the first two features, and prototyped for tablet, because we knew that was the device of choice of our potential first customers.
+
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Designs
+          .body-section-content
+
+            h5 Recommendations as notifications
+
+            p We thought of a lot of ways we could present recommendations to sales reps. The major categories of insights we could surface included the following:
+
+            ul
+              li
+                b Leads:
+                |  mining customer data to provide potential new customers.
+              li
+                b Pipeline:
+                |  predicting win rates and which levers to close, and when.
+              li
+                b Outreach:
+                |  predicting the best times to contact and meet new and existing customers.
+              li
+                b Churn:
+                |  determine the health of existing customers and forecast churn.
+              li
+                b Segments:
+                |  surfacing and exploring customer segments.
+
+            p To really keep things simple for the sales reps, I wanted to surface the right information at the right time, so it would be more likely to be acted upon.
+
+            h5 User flows
+
+            p I mapped out the user's touchpoints with the app, along with the major flows in the MVP:
+
+            ul
+              li Viewing their schedule
+              li Scheduling an event
+              li Searching for a specific customer
+              li Checking a notification, which would take them to the relevant context
+              li Recording notes after a meeting
+              li Viewing a customer's acount
+              li Viewing trends across all customer accounts
+
+            .img-container
+              .caption User journey (green for actions, yellow for views)
+              img(src='../img/2019/works/sales-life/process/user-journey.png')
+
+            p The planner flow was the primary use case by far, and I wanted to take advantage of the screen real estate of a tablet by having the relevant planner contexts visible at all times.
+
+            .img-container.medium
+              .caption Concept wireframe
+              img(src='../img/2019/works/sales-life/process/wireframe.png')
+
+            p All the other flows, when triggered, will slide in to fill the center space, keeping the user grounded in the planner context at all times.
+
+            h5 The planner
+
+            .img-container.outline
+              .multiple.desktop
+                img(src='../img/2019/works/sales-life/mocks/planner_t01.png')
+                img(src='../img/2019/works/sales-life/mocks/dash_t01.png')
+              .caption Default planner view, with weekly statistics toggled.
+
+            p Users would be able to see their entire route mapped out in consecutive order, and geographically plan their week. To navigate through the days of the week, they can either swipe or tap the left and right arrows.
+
+            .img-container.outline
+              img(src='../img/2019/works/sales-life/mocks/planner_t04.png')
+              .caption Quick jump to a different date.
+
+            p A prototype of this experience:
+
+            video.outline(controls controlslist='nodownload' disablePictureInPicture loop)
+              source(src='../img/2019/works/sales-life/mocks/prototype_planner.mov', type='video/mp4')
+              source(src='movie.ogg', type='video/ogg')
+              | Your browser does not support the video tag.
+
+            h5 Scheduling accounts
+
+            p Accounts that get triaged into the planner for scheduling will appear in a fixed "Scheduling" container, with markers on the map so users can compare and see what makes sense to add to the day's schedule.
+
+            p A simple drag and drop mechanism will add it to the schedule of the date the user is viewing. To make the mechanism more learnable, I included a small line of instructions under each section to prompt user interaction.
+
+            .img-container.outline
+              img(src='../img/2019/works/sales-life/mocks/planner_t03.png')
+              .caption Scheduling state.
+
+            p A more detailed look at the drag and drop interaction:
+
+            video.outline(controls controlslist='nodownload' disablePictureInPicture loop)
+              source(src='../img/2019/works/sales-life/mocks/prototype_scheduling.mov', type='video/mp4')
+              source(src='movie.ogg', type='video/ogg')
+              | Your browser does not support the video tag.
+
+            h5 Searching for an account
+
+            p The search function is accessible through the side navigation. Tapping it brings out a context card that starts the user out with some of their more recent customers they've viewed. I included quick actions to allow users to triage them immediately for scheduling, and tapping into the account will pull up the account information.
+
+            .img-container.outline
+              img( src='../img/2019/works/sales-life/mocks/search_t01.png')
+              .caption Search with starting recommendations.
+
+            p As the user types, the most relevant results will update until the query is specific enough to find the correct account.
+
+            .img-container.outline
+              img( src='../img/2019/works/sales-life/mocks/search_t02.png')
+              .caption Updating results as the user types.
+
+            .img-container.outline
+              .multiple.desktop
+                img( src='../img/2019/works/sales-life/mocks/accounts_t01.png')
+                img( src='../img/2019/works/sales-life/mocks/accounts_t03.png')
+              .caption A mockup of the customer account details.
+
+            p Here's a prototype of the search experience, interacting with the module for seeing trends across all customer data.
+
+            video.outline(controls controlslist='nodownload' disablePictureInPicture loop)
+              source(src='../img/2019/works/sales-life/mocks/prototype_analytics.mov', type='video/mp4')
+              source(src='movie.ogg', type='video/ogg')
+              | Your browser does not support the video tag.
+
+            h5 Giving feedback on a customer interaction
+
+            p One of the pain points we heard was around interacting with the CMS, and I wanted to brainstorm ways it could be improved. One of the ideas we came up with was a voice-to-text note taker, so immediate reactions could be captured more easily.
+
+            .img-container.outline
+              .multiple.desktop
+                img( src='../img/2019/works/sales-life/mocks/feedback_t01.png')
+                img( src='../img/2019/works/sales-life/mocks/feedback_t02.png')
+            .img-container.outline
+              .multiple.desktop
+                img( src='../img/2019/works/sales-life/mocks/feedback_t03.png')
+                img( src='../img/2019/works/sales-life/mocks/feedback_t04.png')
+
+            p My client was optimistic about the technological requirements for including this feature. The value really shines when companies need to onboarding new sales people to existing customers and catching them up on the existing relationship, so I included this feature in the prototype.
+
+            p The prototype:
+
+            video.outline(controls controlslist='nodownload' disablePictureInPicture loop)
+              source(src='../img/2019/works/sales-life/mocks/prototype_feedback.mov', type='video/mp4')
+              source(src='movie.ogg', type='video/ogg')
+              | Your browser does not support the video tag.
+
+            h5 Notifications list
+
+            p As much as possible, we wanted to have notifications take users directly to the context of the message.
+
+            ul
+              li For leads and existing customer insights, it would take them to the correct accounts page.
+              li Prompts to show customer details or prompt feedback would open the right flows, and could be triggered by tracking the user's GPS location.
+
+            p For customer insights, we included the option for a notification to be "snoozed", in case a user knew they wouldn't have time to schedule it in for this week.
+
+            .img-container.outline
+              .multiple.desktop
+                img( src='../img/2019/works/sales-life/mocks/notifications_t01.png')
+                img( src='../img/2019/works/sales-life/mocks/notifications_t02.png')
+              .caption Notifications with a filtering toggle.
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Measuring success
+          .body-section-content
+
+            p Ultimately the goal of this app is to improve sales performance. Total revenue increases are definitely going to be the metric that interest businesses purchasing this tool for their sales reps.
+
+            p More granularly, tracking click throughs and comparing them to changes in customer churn and acquisition can help improve the UX of app through its future product iterations.
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Final prototype
+          .body-section-content
+
+            p A look at the whole experience:
+
+            video.outline(controls controlslist='nodownload' disablePictureInPicture loop)
+                source(src='../img/2019/works/sales-life/mocks/prototype_full.mov', type='video/mp4')
+                source(src='movie.ogg', type='video/ogg')
+                | Your browser does not support the video tag.
+        .divider
+        .body-section
+          a.back-to-top(href='#')
+            h2
+              | Back to top
+              img(src='../img/2019/arrow_top.svg')
+
+        .divider
