@@ -1087,10 +1087,25 @@ form {
           }
 
           &.mobile {
-            justify-content: space-between;
             img {
               width: 22%;
-              // padding-right: 10px;
+            }
+
+            @media only screen and (max-width: 701px) {
+              flex-wrap: wrap;
+
+              img {
+                width: 46%;
+                &:first-child, &:nth-child(2) {
+                  margin-bottom: 20px;
+                }
+              }
+
+            }
+          }
+          &.mobile-3 {
+            img {
+              width: 30%;
             }
 
             @media only screen and (max-width: 701px) {
@@ -1106,6 +1121,7 @@ form {
 
             }
           }
+
 
         }
 
