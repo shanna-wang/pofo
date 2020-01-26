@@ -467,23 +467,43 @@ a.work-item {
     width: 100%;
 
 
+
     @media only screen and (min-width: 701px) {
       display: flex;
       flex-direction: row;
 
       > img {
         width: 60%;
-        margin-right: 4%;
       }
       .work-description {
         width: 40%;
+        padding: 0 15px;
       }
     }
+
+    @media only screen and (min-width: 950px) {
+      .work-description {
+        padding: 0 15px;
+      }
+    }
+
+    @media only screen and (min-width: 1250px) {
+      .work-description {
+        padding: 0 30px;
+      }
+    }
+
 
     p {
       margin-top: 40px;
     }
 
+    @media only screen and (max-width: 950px) {
+      .action {
+        display: none;
+
+      }
+    }
     @media only screen and (max-width: 700px) {
       .work-description {
         display: flex;

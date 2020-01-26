@@ -312,12 +312,21 @@ a.work-item {
         display: flex;
         flex-direction: row; }
         a.work-item.featured > img {
-          width: 60%;
-          margin-right: 4%; }
+          width: 60%; }
         a.work-item.featured .work-description {
-          width: 40%; } }
+          width: 40%;
+          padding: 0 15px; } }
+    @media only screen and (min-width: 950px) {
+      a.work-item.featured .work-description {
+        padding: 0 15px; } }
+    @media only screen and (min-width: 1250px) {
+      a.work-item.featured .work-description {
+        padding: 0 30px; } }
     a.work-item.featured p {
       margin-top: 40px; }
+    @media only screen and (max-width: 950px) {
+      a.work-item.featured .action {
+        display: none; } }
     @media only screen and (max-width: 700px) {
       a.work-item.featured .work-description {
         display: flex; }
