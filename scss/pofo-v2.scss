@@ -105,9 +105,8 @@ h3 {
 h4 {
 
   font-family: 'Circe-300';
-  text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   margin-top: 10px;
 
@@ -127,7 +126,16 @@ h6 {
   line-height: 28px;
   font-size: 16px;
   margin: 0;
+}
 
+span {
+  font-family: 'Circe-300';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 10px;
+  opacity: 0.7;
 }
 
 p {
@@ -167,6 +175,7 @@ a {
   color: white;
 }
 
+
 a, input {
   font-family: 'Circe-400';
   font-size: 14px;
@@ -174,39 +183,6 @@ a, input {
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.5s all ease;
-
-  &.button {
-    display: inline-flex;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    height: 50px;
-
-    margin: 0;
-    padding: 0 25px;
-    border: 1px solid rgba(255,255,255,0.8);
-    background: rgba(66,72,84,0.6);
-
-    img {
-      margin-left: 0px;
-      opacity: 0;
-      transition: 0.5s all ease;
-      width: 0px;
-      height: 10px;
-
-    }
-
-    &:hover {
-      border: 1px solid white;
-      background: $grey;
-
-      img {
-        margin-left: 20px;
-        opacity: 1;
-        width: 25px;
-      }
-    }
-  }
 
   &.back {
     color: white;
@@ -224,6 +200,46 @@ a, input {
     }
   }
 }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  white-space: nowrap;
+
+  margin: 0;
+  padding: 0 25px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(66,72,84,0.6);
+
+  img {
+    margin-left: 0px;
+    opacity: 0;
+    transition: 0.5s all ease;
+    width: 0px;
+    height: 10px;
+  }
+
+  @media only screen and (min-width: 701px) {
+
+    &:hover {
+      border: 1px solid white;
+      background: $grey;
+
+      img {
+        margin-left: 20px;
+        opacity: 1;
+        width: 25px;
+      }
+    }
+  }
+
+
+
+}
+
 
 /////   GRID   /////
 
@@ -405,9 +421,12 @@ nav {
 section {
 
   &.description {
-    max-width: 600px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: white;
+
+    // h2 {
+    //   text-align: center;
+    // }
   }
 
   &.my-work {
@@ -415,6 +434,7 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 50px;
   }
 
 }
@@ -422,7 +442,7 @@ section {
 a.work-item {
   cursor: pointer;
   display: block;
-  margin: 1%;
+  margin: 1% 0;
   background: rgba(0,0,0,0.1);
   border-radius: 8px;
   text-transform: none;
@@ -433,20 +453,61 @@ a.work-item {
   width: 48%;
   padding: 15px;
 
-  @media only screen and (max-width: 700px) {
-    margin: 2%;
-    width: 96%;
-  }
 
-  img {
+  @media only screen and (max-width: 700px) {
+    margin: 2% 0;
     width: 100%;
   }
 
-  p {
-    opacity: 0.8;
-    margin: 0;
-    font-size: 14px;
+  > img {
+    width: 100%;
   }
+
+  &.featured {
+    width: 100%;
+
+
+    @media only screen and (min-width: 701px) {
+      display: flex;
+      flex-direction: row;
+
+      > img {
+        width: 60%;
+        margin-right: 4%;
+      }
+      .work-description {
+        width: 40%;
+      }
+    }
+
+    p {
+      margin-top: 40px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .work-description {
+        display: flex;
+        .action {
+          display: none;
+          width: 300px;
+
+          .button {
+            margin-top: 10px;
+            height: 40px;
+            padding: 20px;
+          }
+        }
+        p {
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+
+
+
+  }
+
 }
 
 section.footer {
@@ -712,9 +773,9 @@ form {
 
     }
   }
-
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 700px) {
     .panel {
+      opacity: 0;
       &:nth-child(1) {
         transition-delay: 0s;
       }
@@ -725,6 +786,9 @@ form {
         transition-delay: 0s;
       }
     }
+  }
+  @media only screen and (max-width: 400px) {
+
     .panel.transition-pane-slide-in {
       &:nth-child(1) {
         background: $background-pass;
@@ -932,7 +996,7 @@ form {
 
   .container {
     margin-top: -300px;
-    max-width: 900px;
+    max-width: 800px;
 
     @media only screen and (max-width: 701px) {
       margin-top: -200px;
