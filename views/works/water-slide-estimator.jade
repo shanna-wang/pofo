@@ -48,7 +48,7 @@ block content
           .body-section-content
             p WhiteWater West is a company that designs and manufactures attractions for water parks, with features ranging from water slides to entire theme parks.
 
-            p I worked with another UX designer to design a responsive slide building tool to empower sales people to build and estimate the cost of custom slides.
+            p I worked with another UX designer to design a responsive slide building tool that would empower sales people to build and estimate the cost of custom slides.
 
         .divider
 
@@ -56,17 +56,17 @@ block content
           .body-section-title
             h2 The problem
           .body-section-content
-            p To really understand the scope of the problem, we spoke with people on almost every team at Whitewater - from the top-level stakeholders, to sales people, slide architects, designers, and estimators.
+            p To really understand the scope of the problem, we spoke with people on almost every team at Whitewater, from the top-level stakeholders to sales people, slide architects, designers, and estimators.
 
             p The process of designing, customizing, and getting price estimates for a water slide required a lot of resources and time.
 
-            p Sales people would begin the process of discussing requirements with a prospective client, and put in a request to slide designers and architects. Once designers were able to put together a rough sketch, slide estimators could provide a final price. The entire process could take up to a week, resulting in a lot of wait time for the client. Sales people reported their competitors being able to pull estimates together much more quickly &mdash; even if they were inaccurate, it gave them the advantage in negotiations. If the client were to have any changes or revisions, the entire cycle had to repeat again.
+            p Sales people would begin the process of discussing requirements with a prospective client, and put in a request to slide designers and architects. Once designers were able to put together a rough sketch, slide estimators could provide a final price. The entire process could take up to a week, resulting in a lot of wait time for the client. Sales people reported their competitors being able to pull estimates together much more quickly; even if they were inaccurate, it still gave them the advantage in negotiations. If the client were to have any changes or revisions, the entire cycle had to repeat again.
 
             .img-container
               img(src='../img/2019/works/water-slide-estimator/process/process-before.png')
               .caption Current slide estimate process.
 
-            p Our proposal was to build a tool that would give the sales representatives the power to create ROM (rough order of magnitude) estimates that were within 10% accuracy of the final price. This would be enough to isolation iterations in the sales stage as the scope of the project was negoiated with the client. The job requests that did proceed to actual slide designers, architects, and estimators, would be more finalized, requiring less future iteration and resulting in less wasted effort.
+            p Our proposal was to build a tool that would give the sales representatives the power to create ROM (rough order of magnitude) estimates that were within 10% accuracy of the final price. This would be enough to isolate iterations in the sales stage as the scope of the project was negotiated with the client. The job requests that did proceed to actual slide designers, architects, and estimators would be more finalized, requiring less future iteration and resulting in less wasted effort.
 
             .img-container
               img(src='../img/2019/works/water-slide-estimator/process/process-after.png')
@@ -80,17 +80,17 @@ block content
           .body-section-title
             h2 Research
           .body-section-content
-            p Not only was it important for us to understand the sale people's problems and frustrations, we also had to fully understand the slide design process and all of the complex data structures we were working with.
+            p Not only was it important for us to understand the sales people's problems and frustrations, we also had to fully understand the slide design process and all of the complex data structures we were working with.
 
             p One of the more unexpected takeaways we had from this experience was how little the sales people knew about how architects and designers worked. The terminology they used for the same slide components were often completely different.
 
-            p From the interviews with the sales team, we created identified some of their major motivations and frustrations:
+            p From the interviews with the sales team, we identified some of their major motivations and frustrations:
 
             ul
-              li Values human interaction and a sense of connection with their client.
-              li Lives a fast-paced life and craves efficiency and instant feedback.
-              li Hates losing clients to competitors due to processing time or lack of information.
-              li Feels like he has no power or self-efficacy to speed up his process and seal the deal.
+              li They valued human interaction and a sense of connection with their client.
+              li They lived fast-paced lives and craved efficiency and instant feedback.
+              li They hated losing clients to competitors due to processing time or lack of information.
+              li The felt like they had no power or self-efficacy to speed up their process and seal the deal.
 
 
         .divider
@@ -100,7 +100,7 @@ block content
             h2 Our solution
           .body-section-content
 
-            p We defined some key concepts and user goals we wanted our product to achieve:
+            p We defined some key concepts and user goals that we wanted our product to achieve:
 
             ul
               li
@@ -114,10 +114,10 @@ block content
                 |  The tool should be as visual and easy to digest as possible, eliminating the complexity in text-heavy forms.
               li
                 b Accessibility:
-                |  The tool should be easily understood and usable by users of varying background and technical ability.
+                |  The tool should be easily understood and usable by sales reps of varying backgrounds and technical ability.
               li
-                b Educational
-                |  The tool should possess the ability to act as a learning resource, allowing sales people to access the information they need.
+                b Educational:
+                |  The tool should possess the ability to act as a learning resource, allowing sales people to access the information they would need.
 
         .divider
 
@@ -136,7 +136,7 @@ block content
                 img(src='../img/2019/works/water-slide-estimator/process/02-dashboard.jpg')
               .caption Login and dashboard.
 
-            p Often slide requests from clients would look really similar to past slides. We wanted to include a "favouriting" mechanism for complexes within estimates, so commonly used slide designs could be used as springboards to build new designs off of.
+            p Often slide requests from clients would look fairly similar to past slides. We wanted to include a "favouriting" mechanism for complexes within estimates, so commonly used slide designs could be used as springboards for building designs.
 
             .img-container.outline
               .multiple.desktop
@@ -145,14 +145,15 @@ block content
               .caption Estimates and favourites.
 
             h5 Estimates
-            p Estimates were a complex structure that, on the top level, looked pretty similar from one to another. We wanted to give users more ways to navigate and distinguish between a high volume of estimates, so we included a filter for the different slide types an estimate contained. From what we heard, this was one of the more memorable and identifying features.
+            p Estimates were a complex structure that, on the top level, looked pretty similar from one to another. We wanted to give users more ways to navigate and distinguish between a high volume of estimates, so we included a filter for the different slide types that an estimate contained. From what we heard, this was one of the more memorable and identifying features.
+
             .img-container.outline
               .multiple.desktop
                 img(src='../img/2019/works/water-slide-estimator/process/03b-my-estimates-filter.jpg')
                 img(src='../img/2019/works/water-slide-estimator/process/03c-my-estimates-filter-selected.jpg')
               .caption Filtering on estimates.
 
-            p Estimates ultimately had to be linked to a formal client proposal in the backend, so other team members could access the details of the project. While we wanted to encourage this behaviour early in the process, we didn't want it to be too limiting to sales people, especially since a frequent use case we heard was for them to be able to do up a rough ROM estimate on the fly with the client, in a less official capacity.
+            p Estimates ultimately had to be linked to a formal client proposal in the backend, so other team members could access the details of the project. While we wanted to encourage this behaviour early in the process, we didn't want it to be too limiting to sales people, especially since a frequent use case we heard was for them to be able to come up with a rough ROM estimate on the fly with the client, in a less official capacity.
 
             .img-container.outline
               .multiple.desktop
@@ -160,15 +161,15 @@ block content
                 img(src='../img/2019/works/water-slide-estimator/process/06a-skipped.jpg')
               .caption Creation allows users to skip entering the ID, and the summary page would include the data field for manual input later.
 
-            p The estimate summary was the place users could look at an overview of all the complexes within the scope of the project, and a running total of the slides and features.
+            p The estimate summary was the place where users could look at an overview of all the complexes within the scope of the project, and a running total of the slides and features.
 
-            .img-container.outline
+            .img-container.medium.outline
               img(src='../img/2019/works/water-slide-estimator/process/06-estimate-summary.jpg')
               .caption Estimate summary.
 
             h5 Complexes
 
-            p Estimates contained complexes, which was typically made up of an optional central tower and some number of customized water slides.
+            p Estimates contained complexes, which were typically made up of an optional central tower and some number of customized water slides.
 
             .img-container.outline
               .multiple.desktop
@@ -190,7 +191,7 @@ block content
 
             p Knowing this was the most data-heavy page, we wanted to keep the experience as visual as we could with a simple representation of the slide they were building.
 
-            .img-container.outline
+            .img-container.medium.outline
               img(src='../img/2019/works/water-slide-estimator/process/08a-sb-general.jpg')
               .caption Slide builder.
 
@@ -202,11 +203,11 @@ block content
                 img(src='../img/2019/works/water-slide-estimator/process/08d-sb-add-feature.jpg')
               .caption Adding features.
 
-            .img-container.outline
+            .img-container.medium.outline
               img(src='../img/2019/works/water-slide-estimator/process/08f-sb-measurements.jpg')
               .caption The final step.
 
-            p As fields were specified for these custom slides, more and more constraints would be applied on the future steps. For example, slides with certain features had a minimum height they needed to be.
+            p As fields were specified for these custom slides, more and more constraints would be applied on the future steps. For example, slides with certain features had a minimum height requirement.
 
             p We sat down with a designer to come up with a list of these constraints, and wanted to surface them appropriately to the sales people so they could be armed with the knowledge they needed to build better slides.
 
@@ -263,9 +264,9 @@ block content
               .caption Complex builder, empty.
               img(src='../img/2019/works/water-slide-estimator/mocks/d-05a.jpg')
 
-            p Similarly to the estimate creation, we wanted to put users directly into the building context, without the extra page in between to funnel between the two choices. We still gave that choice, but now the experience was a little more seamless.
+            p Similarly to the estimate creation, we wanted to put users directly into the building context, without the extra page beforehand to funnel between the two choices. We still gave that choice, but now the experience was a little more seamless.
 
-            .img-container.outline
+            .img-container.medium.outline
               .caption Complex builder, populated.
               img(src='../img/2019/works/water-slide-estimator/mocks/d-05b.jpg')
 
@@ -291,7 +292,7 @@ block content
 
             h5 Slide builder
 
-            p For desktop version of the slide builder, we moved to a layout where everything was visible at a glance, so less scrolling would be required, and the model would be visible at all times.
+            p For the desktop version of the slide builder, we moved to a layout where everything was visible at a glance, so less scrolling would be required, and the model would be visible at all times.
 
             .img-container.outline
               .caption Slide builder.
@@ -306,7 +307,7 @@ block content
                 img(src='../img/2019/works/water-slide-estimator/mocks/d-06c.jpg')
                 img(src='../img/2019/works/water-slide-estimator/mocks/d-06d.jpg')
 
-            p For mobile, we knew we wanted to prioritize the slide visual. We decided to fix it to the top of the screen, and have the bottom card dynamically change based on the step the user was on.
+            p For mobile, we knew we wanted to prioritize the slide visual. We decided to fix it to the top of the screen, and have the bottom card dynamically change based on the step the user was currently on.
 
             .img-container.outline
               .multiple.mobile-3
@@ -352,6 +353,22 @@ block content
 
             .img-container
               img(src='../img/2019/works/water-slide-estimator/mocks/styleguide.png')
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Measuring success
+          .body-section-content
+
+            p These were the main metrics that would indicate the overall success of this slide-building tool:
+
+            ul
+              li The percentage accuracy of the ROM estimate to the actual final price of the designed slide.
+
+              li The number of SK requests put through to designers from before compared to after.
+
+              li The total sales targets of the company.
 
 
         .divider
