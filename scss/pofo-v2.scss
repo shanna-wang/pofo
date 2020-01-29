@@ -442,7 +442,7 @@ section {
 a.work-item {
   cursor: pointer;
   display: block;
-  margin: 1% 0;
+  margin: 10px 0;
   background: rgba(0,0,0,0.1);
   border-radius: 8px;
   text-transform: none;
@@ -471,6 +471,7 @@ a.work-item {
     @media only screen and (min-width: 701px) {
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
 
       > img {
         width: 60%;

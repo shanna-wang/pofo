@@ -292,7 +292,7 @@ section.my-work {
 a.work-item {
   cursor: pointer;
   display: block;
-  margin: 1% 0;
+  margin: 10px 0;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-transform: none;
@@ -310,7 +310,8 @@ a.work-item {
     @media only screen and (min-width: 701px) {
       a.work-item.featured {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        align-items: flex-start; }
         a.work-item.featured > img {
           width: 60%; }
         a.work-item.featured .work-description {
