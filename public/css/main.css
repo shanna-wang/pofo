@@ -639,6 +639,9 @@ form {
     @media only screen and (max-width: 701px) {
       .work-body .body-section {
         flex-direction: column; } }
+    .work-body .body-section.full {
+      display: block;
+      text-align: center; }
     .work-body .body-section a.plain {
       color: #E66363;
       text-transform: none;
@@ -647,6 +650,16 @@ form {
       color: black;
       display: block;
       margin: 0 auto; }
+    .work-body .body-section a.button {
+      color: black;
+      display: inline-flex;
+      margin: 0;
+      margin-top: 20px;
+      background: white;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      transition: 0.3s all ease; }
+      .work-body .body-section a.button:hover {
+        border: 2px solid #4F5D7A; }
     .work-body .body-section a img {
       margin-left: 10px;
       transition: 0.5s all ease; }

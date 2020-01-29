@@ -1034,6 +1034,11 @@ form {
       flex-direction: column;
     }
 
+    &.full {
+      display: block;
+      text-align: center;
+    }
+
     a {
       &.plain {
         color: $pink;
@@ -1044,6 +1049,20 @@ form {
         color: black;
         display: block;
         margin: 0 auto;
+      }
+
+      &.button {
+        color: black;
+        display: inline-flex;
+        margin: 0;
+        margin-top: 20px;
+        background: white;
+        border: 2px solid rgba(0,0,0,0.1);
+        transition: 0.3s all ease;
+
+        &:hover {
+          border: 2px solid $grey-blue;
+        }
       }
 
 

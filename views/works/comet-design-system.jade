@@ -28,8 +28,11 @@ block content
           .body-section-title
             h2 Context
           .body-section-content
-            p Battlefy is an online marketplace that allows players to find and create esports tournaments. With the team's priorities over the past two years focused on revenue and B2B engagements, Battlefy is now a platform that is trusted globally by some of the largest game studios and publishers for competitive gaming at scale. However, its revenue-driven projects have shifted the team away from its users, and over time, this has taken its toll on the platform in the form of crippling product debt.
+            p Battlefy is an online marketplace that allows players to find and create esports tournaments. With the team's priorities over the past two years focused on revenue and B2B engagements, Battlefy is now a platform that is trusted globally by some of the largest game studios and publishers for competitive gaming at scale. However, its revenue-driven projects have shifted the team away from its users, and over time, this has taken its toll on the platform in the form of crippling product debt on both the design and engineering fronts.
+
             p I joined the team as the business was just starting to shift its priorities to scalability, both in its revenue model and product.
+
+            p During my time at Battlefy, I spearheaded the team's first real attempt at creating and maintaining a coherent design system, pitching the project to stakeholders.  I led a team of 2 other product designers and 5 software engineers, and planned Comet's first few months of execution.
 
 
         .divider
@@ -41,26 +44,32 @@ block content
 
           .body-section-content
             p The majority of Battlefy's core features were developed over 5 years ago, at a time when the team was scrappy and small, without dedicated design resources. It was a time of hyper growth, but at the cost of quality and long-term strategy.
-            p Even now, Battlefy continues to have limited design and development resources, and client projects come with invariably tight deadlines that don't often allow for proper strategy and documentation.
 
 
-            h5 Limited resources
 
-            p This was probably the core problem from which all of Battlefy's other product issues stemmed. Development and design resources are spread incredibly thin across the multitude of projects the team takes on throughout the year. White-label projects often (read: always) require unique landing pages, varying registration requirements, and tournament features. Because of the super tight deadlines, there is often limited communication between teams, and a lot of varying designs for similar features.
+            h5 Limited time and resources
+
+            p This was probably the core problem from which all of Battlefy's other product issues stemmed. Development and design resources were spread incredibly thin across the multitude of projects the team took on throughout the year. White-label projects almost always required unique landing pages, varying registration requirements, and custom tournament features. And each time the team took on a project like this, the same work was repeated over and over, the solutions to the same problems implemented dozens of different ways.
+
+            p Having proper, centralized documentation for existing design solutions and guidelines on how to implement them would be critical for scaling design and development work, freeing the team up to solve new problems.
 
             h5 Poor user experience
 
             p Most of the platform's core features were hacked together quickly by developers many years ago, and never prioritized for a second iteration. As a result, a player's journey through a complex tournament experience is often slow, unintuitive, and confusing, resulting in high rates of churn.
 
+            p Almost every component on the platform needed a redesign, or a second iteration &mdash; it made sense to start documenting all new components into one cohesive system.
+
 
             h5 Inconsistent UI
 
-            p As the team has grown over time, the platform has passed through multiple hands and owners, and it shows. The same UI elements look completely different throughout the Battlefy platform, resulting in a unpolished experience that users are unable to rely on.
+            p As the team has grown over time, the platform had passed through multiple hands and owners, and it showed. The same UI elements looked completely different throughout the Battlefy platform, resulting in a unpolished experience that users were unable to rely on and an incoherent brand.
+
+            p We needed to bridge the lack of communication between teams, and start documenting our work, or this problem would never be solved.
 
 
             h5 Outdated brand
 
-            p Battlefy's existing brand didn't have any clear guidelines, and felt unfocused without a clear user goal. The branding of featured engagements have always overshadowed Battlefy's, leaving a weak and forgettable impression on its users.
+            p Battlefy's existing brand didn't have any clear guidelines, and felt unfocused without a clear user goal. The branding of featured engagements had always overshadowed Battlefy's, leaving a weak and forgettable impression on its users.
             p Due to aforementioned resourcing problems, it never made sense to iterate on the brand when there were so many other fires to put out.
 
 
@@ -126,8 +135,8 @@ block content
             p We would track both the number of open bugs and tickets, as well as the amount of dev hours spent on them.
 
 
-
         .divider
+
 
 
         .body-section
@@ -137,23 +146,148 @@ block content
           .body-section-content
             p We started with an audit of Battlefy's existing UI. We hunted down almost every variation of every element, documented them, and came together as a team to figure out how we wanted to organize them and improve them.
 
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/audit-checkboxes.png')
+              .caption A sample of checkboxes collected across Battlefy.
+
+            h5 Organizing components
+
+            p
+              | I drew a lot of inspiration from Shopify's
+              a.plain(href="https://polaris.shopify.com/components/get-started" target="_blank")  Polaris
+              | ; in particular, I loved how they categorized components based on their
+              b  functionality
+              | , instead of just by the inherent component type. To me, this puts the focus on problem-solving first, and sets a good precedent for how developers would interact with the system. The same UI solution could be applicable to many different problems, and we agreed as a team it would make the system easier to navigate in the long run.
+
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/categories.png')
+              .caption Organizing our system
+
+            h5 Grid and layout
+
+            p Knowing that Battlefy needed to be highly modularized and customizable based on different client requirements, we liked the idea of a card-based system. We created a responsive grid across which different card elements could be rearranged and prioritized according to each page's needs.
+
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/grid.png')
+              .caption Grid system.
+
+        .divider
 
         .body-section
           .body-section-title
             h2 Brand Research
 
           .body-section-content
+            p As part of our work undertaking a new design system, I wanted to do a light round of brand research to re-focus Battlefy's emotional user goals.
+
+            p Battlefy's current brand was 5 years outdated, and the decisions made were based off of what resonated with the founding team at the time. Overall, the colours felt dull, bland, and a little generic.
+
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/current-brand-colors.png')
+              .caption Battlefy's current brand colours.
+
+
+
+            p I wanted to infuse and update some of the brand elements to better target player emotions throughout the tournament experience. In the heat of competition, emotions are highly polarized from soaring triumphs to devastating defeat. I wanted our brand to both celebrate those wins, and mitigate crushing losses.
+
+            p I sent a survey out to both our player base and our internal team, to get a feel for how Battlefy's brand was currently perceived.
+
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/emotion-maps.png')
+              .caption A map of most commonly experienced emotions by players.
+
             p
+              | The emotions stood out to me were ones that were more unique to the online tournament experience:
+              b  pride, passion, excitement, hope
+              | . I wanted to inspire these feelings with our colours, copy, and illustrations.
 
+            p The way I wanted players to view our brand was like a coach. We wanted to reflect the bold ambition of our players, and empower players on their competitive journey. Our voice would have more focus on being supportive and empathetic, while also being confident, trustworthy and honest.
 
+            p Knowing that updates to the platform would be made incrementally, I didn't want the new brand to be too radical a departure from what currently existed. In the end, our moodboard took elements from everyone's individual ideas.
 
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/moodboard.png')
+              .caption Our moodboard.
+
+            p We loved imagery of space, symbolizing grand hopes and dreams. Motion and action made the evoked excitement, and that upwards mobility all players were striving for with continuous improvement.
+
+            .img-container.medium
+              img(src='../img/2019/works/comet-design-system/process/dls-colours.png')
+              .caption Our new colour palette.
+
+            p We introduced gradients to bring some motion into the platform, and widened the palette. Red was the tried and true Battlefy colour, and we felt it still embodied the passion and excitement we wanted to convey. We introduced purple to soften the palette a little, and tie in elements of prestige and pride.
+
+            .img-container
+              img(src='../img/2019/works/comet-design-system/process/typography.png')
+
+            p We refreshed our body font from Roboto, which felt over-used and generic, to something that was still highly legible, but felt a bit more playful and fun. We also picked out a display font for major headers and marketing content.
 
         .divider
 
         .body-section
+          .body-section-title
+            h2 Our process
+
+          .body-section-content
+            p There were never dedicated resources to work on Comet. The team formed organically, starting with myself and the design team, and slowly grew as more developers saw the importance of the project. All contributions were done as projects came in, still prioritized for revenue. The difference was that now the team was aligned and had a bigger vision to work towards.
+
+            p We ended up evolving our workflow to having a single weekly meeting, where the team would come together to discuss the components they had worked on or changed over the past week.
+
+            p I used a component-level tracker as well as a user-flow based tracker to measure our progress.
+
+            .img-container
+              .mutliple.desktop
+                img(src='../img/2019/works/comet-design-system/process/component-tracker.png')
+                img(src='../img/2019/works/comet-design-system/process/flow-tracker.png')
+              .caption Completeness trackers for the DLS.
+
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 Launching Comet
+
+          .body-section-content
+            p The team had put in countless hours over the quarter, and the design system had become our pride and joy &mdash; it felt right for us to put a name to the work we'd done.
+
+            p We wanted a metaphor that resonated with the whole team; something that felt grand enough to symbolize our lofty vision, but grounded like the scrappy team that had created it.
+
+            p For us, a comet signified a journey. They blazed a trail through time and space, and our hope was that as Comet gained momentum, it would help guide all of our internal teams and have a huge impact on our platform and processes.
+
+            p To introduce Comet to the team, I gave a small presentation on what design systems were, and why Battlefy needed one. You can check out the slides below!
+
+
+        .divider
+
+
+        .body-section
           a(href='https://docs.google.com/presentation/d/1qWkv4jed1cvRfs2RTdpiBrFYu08zXl5Gu6j0hwVWXMg/edit?usp=sharing' target='_blank')
             h2
-              | Check out the slides here
+              | Check out my design systems talk
               img(src='../img/2019/arrow_right_black.svg')
 
+        .divider
+
+        .body-section
+          .body-section-title
+            h2 The future
+
+          .body-section-content
+            p A design system is constantly evolving, and Comet still has a long ways to go. It could take years for the business to find the time and resources to be able to truly revisit and rework the core Battlefy experience.
+
+            p However, the work that we put into Comet is incrementally contributing to that eventual rework. As the system becomes more fleshed out and the component base is more complete, Battlefy's eventual redesign won't be the monumental task that it is today.
+
+
+        .divider
+
+
+        .body-section.full
+
+          h2 Thanks for reading!
+          br
+          a.button(href='/')
+            | Back to works
+            img(src='../img/2019/arrow_right_black.svg')
+
+        .divider
 
