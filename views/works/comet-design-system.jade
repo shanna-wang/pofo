@@ -30,89 +30,115 @@ block content
           .body-section-content
             p Battlefy is an online marketplace that allows players to find and create esports tournaments. With the team's priorities over the past two years focused on revenue and B2B engagements, Battlefy is now a platform that is trusted globally by some of the largest game studios and publishers for competitive gaming at scale. However, its revenue-driven projects have shifted the team away from its users, and over time, this has taken its toll on the platform in the form of crippling product debt on both the design and engineering fronts.
 
-            p I joined the team as the business was just starting to shift its priorities to scalability, both in its revenue model and product.
-
             p During my time at Battlefy, I spearheaded the team's first real attempt at creating and maintaining a coherent design system, pitching the project to stakeholders.  I led a team of 2 other product designers and 5 software engineers, and planned Comet's first few months of execution.
 
 
         .divider
 
-
         .body-section
           .body-section-title
-            h2 The problem
+            h2 Business problems
 
           .body-section-content
-            p The majority of Battlefy's core features were developed over 5 years ago, at a time when the team was scrappy and small, without dedicated design resources. It was a time of hyper growth, but at the cost of quality and long-term strategy.
 
+            h5 Product debt
+
+            p The majority of Battlefy's core platform features were developed over 5 years ago in an older version of Angular. This was done at a time when the company was focused on immediate revenue and hyper-growth, and the team was scrappy and small, without dedicated design resources.
+
+            p As the team grew, B2B engagements dominated Battlefy's revenue stream, involving more features to build onto the core platform, as well as marketing landing pages that were white-labeled to the client. It became increasingly difficult to tack features onto the platform without completely re-writing the backend, and there was a growing movement within the engineering team to migrate to React.
+
+            p Today, the platform is a patchwork of Angular and React components, and the task of re-architecting Battlefy feels monumental.
 
 
             h5 Limited time and resources
 
-            p This was probably the core problem from which all of Battlefy's other product issues stemmed. Development and design resources were spread incredibly thin across the multitude of projects the team took on throughout the year. White-label projects almost always required unique landing pages, varying registration requirements, and custom tournament features. And each time the team took on a project like this, the same work was repeated over and over, the solutions to the same problems implemented in dozens of different ways.
+            p Development and design resources were spread incredibly thin across the multitude of client projects the team took on throughout the year.
 
-            p Having proper, centralized documentation for existing design solutions and guidelines on how to implement them would be critical for scaling design and development work, freeing the team up to solve new problems.
+            p Due to the tight deadlines that came with tournament contracts, there was almost no design or technical documentation for existing components and features. Each time a new team took on a project, the same work was repeated over and over, with the solutions to the same problems implemented in dozens of different ways across the platform.
+
+            h5 High user churn
+
+            p Battlefy's priority over the past few years has been securing B2B revenue, pumping out a high volume of features and functionality to satisfy client requests. The core metrics that drove those deals were usually the amount of player impressions and tournament registrations, most of which were driven from marketing campaigns leveraging the client's existing player base.
+
+            p The result was that Battlefy had very low player retention from those engagements. Once the one-off competition was over, the large majority of those players had no interest in participating in other tournaments on the platform.
+
+            p In the long term, Battlefy's future hinged on its ability to create a self-sustaining revenue model, and plans were in the works for B2C monetization experiments to start. For our marketplace to sustain itself, we needed to maximize player retention from our B2B deals. With some of these engagements driving hundreds of thousands of players to our platform, a strong association of Battlefy as a trusted, easy-to-use platform would be a crucial factor impacting those player metrics.
+
+        .divider
+        .body-section
+          .body-section-title
+            h2 User problems
+
+          .body-section-content
 
             h5 Poor user experience
 
-            p Most of the platform's core features were hacked together quickly by developers many years ago, and were never prioritized for a second iteration. As a result, a player's journey through a complex tournament experience was often slow, unintuitive, and confusing, resulting in high rates of churn.
+            p Most of the platform's core features were hacked together quickly by developers many years ago, and were never prioritized for a second iteration. As a result, a player's journey through a complex tournament experience was often slow, unintuitive, and confusing, resulting in high rates of churn and leaving a negative impression of Battlefy's brand.
 
-            p Almost every component on the platform needed a redesign, or a second iteration &mdash; it made sense to start documenting all new components into one cohesive system.
+            p Almost every component on the platform needed a redesign, or a second iteration.
 
+            h5 Inconsistent brand and UI
 
-            h5 Inconsistent UI
+            p Battlefy's existing brand didn't have any clear guidelines, and felt unfocused without a clear user goal. The branding of featured engagements had always overshadowed Battlefy's own, leaving a weak and forgettable impression on its users.
 
-            p As the team grew over time, the platform passed through multiple hands and owners, and it showed. The same UI elements looked completely different throughout the Battlefy platform, resulting in an unpolished experience that users were unable to rely on and an incoherent brand.
+            p As the team grew over time, the platform passed through multiple hands and owners, and it showed. The same UI elements looked completely different throughout the Battlefy platform, resulting in an unpolished experience that users were unable to rely on, and an incoherent brand.
 
-            p We needed to bridge the lack of communication between teams, and start documenting our work, or this problem would never be solved.
-
-
-            h5 Outdated brand
-
-            p Battlefy's existing brand didn't have any clear guidelines, and felt unfocused without a clear user goal. The branding of featured engagements had always overshadowed Battlefy's, leaving a weak and forgettable impression on its users.
-            p Due to aforementioned resourcing problems, it never made sense to iterate on the brand when there were so many other fires to put out.
-
-
+            p We needed to bridge the lack of communication between teams and start documenting our work, or this problem would never be solved.
 
         .divider
-
-
         .body-section
           .body-section-title
             h2 My proposal
 
           .body-section-content
-            p I wanted to revamp Battlefy's visual language, and document it in a way that was scalable and teachable. Not only did I want to create a better user experience for Battlefy's users, I wanted those solutions to be designed for scale, and documented well so that designers and developers could immediately start benefiting from the system.
+
+            p A
+              b  design system
+              |  was the perfect way for Battlefy to kickstart this platform overhaul, and address almost all of its business and user problems.
+
+            p  Documenting everything with clear usage guidelines would empower the growing team to continue consistent implementation, saving an exponential amount of resourcing over time as we continued to chip away at product debt.
 
 
-            h5 Improving product quality to drive revenue
+            h5 Defining the brand and vision to focus the team
 
-            p Almost all of the company's revenue at the time came from its one-off engagements with other game developers and brands, and the core metrics that drove those deals were the amount of player impressions and tournament registrations. Not only that, but Battlefy's future hinged on its ability to create a self-sustaining revenue model, and plans were in the works for B2C monetization experiments to start. For our marketplace to sustain itself, we needed to maximize player retention from our B2B deals. With some of these engagements driving hundreds of thousands of players to our platform, a strong association of Battlefy as a trusted, easy-to-use platform would be a crucial factor impacting those player metrics.
+            p The biggest reason product designers were so deviant in their finished designs was that there were no overarching design principles, brand guidelines, or product vision to guide their choices. I wanted to focus and align the team on Battlefy's brand goals, and ensure we were aligned on the principles guiding the team's decisions.
 
-            p Building a new design system would be the perfect opportunity to redefine Battlefy's visual language, and lend consistency of good UX practices to the platform.
+            p For the next year or so, that focus would be on the
+              b  scalability
+              |  and
+              b  reusability
+              |   of components, as well as an overall commitment to product quality. These pillars would eventually evolve to become Battlefy's product design principles.
 
-            p Though this wasn't an official goal of the design system, I also wanted to take this chance to refine and give purpose to Battlefy's brand strategy to better target and speak to its user base.
+            p We needed to refine and give purpose to Battlefy's brand strategy to better target and speak to its user base. Defining and documenting these goals at the start would be critical to how we made decisions in the future, when we eventually revisited every component and flow on the platform.
 
-            h5 Scaling product solutions to save development time
 
-            p Creating a well-documented design system would reduce the number of implementation decisions that both designers and developers have to make on a daily basis. Both teams would have a central source of truth to reference, a repository of well-documented components with clear guidelines on when and why to use them. Designers would no longer spend time re-designing solutions to problems that had been solved before, and developers would only ever have to implement the same components once. Saving this kind of time across the product team means resources  that can be put towards even more brand deals, and more monetization experiments.
+            h5 Improving UX incrementally to minimize user churn
+
+            p Battlefy needed to retain its users, and in order to do that, it needed to drastically improve its user experience across the platform. Navigation and user flows felt complex and disjointed; they needed to be simple and easy to use and understand.
+
+            p It was also critical we committed to more stringent QA and testing processes. Having a minimally polished product became one of our team's philosophies, so we weren't overcommitting to features that we couldn't reliably deliver.
+
+            p These changes would take time, and had be made incrementally, one user flow at a time. This was in part due to challenges with the nature of our technical debt, and also partly due to the fact that Battlefy still needed to stick to its existing B2B-driven roadmap in order to sustain its revenue model. The strategy would be to future-proof as much as we could in the design and planning stages, to best set Battlefy up for the future with its long-term B2C vision.
+
+            p This would create a period of time when Battlefy had vastly conflicting visual language. While it was important for us to keep that in mind to mitigate these differences in whatever ways we could, it was also important for us to start making the right decisions for our users. Because of how large our user churn was at the time, it felt like a small risk to take, and was far outweighed by the benefits the changes would bring.
+
+            p That being said, my strategy was still to start small, with features that had less traffic and visibility. As the design system grew to completion, it would make adoption much quicker and easier for the high-impact core user flows, and we could thus minimize this period of conflicting visual messaging as much as possible.
+
+            h5 Documenting components to save time and improve consistency
+
+            p Having proper, centralized documentation for existing design solutions and guidelines on how to implement them would be critical for scaling design and development work, reducing the number of implementation decisions that both designers and developers have to make on a daily basis. Both teams would have a central source of truth to reference, a repository of well-documented components with clear guidelines on when and why to use them.
+
+            p Designers would no longer spend time re-designing solutions to problems that had been solved before, and developers would only ever have to implement the same components once. Saving this kind of time across the product team meant resources that could be put towards new problems and experiments.
+
 
         .divider
         .body-section
           .body-section-title
-            h2 Strategy
+            h2 Measuring success
 
           .body-section-content
 
-            h5 Minimize overhead, maximize value
-
-            p I knew from the start that a complete overhaul of the platform's numerous, complex user flows was impossible and idealistic. The design system would have to be built incrementally, and project prioritization was still bottlenecked by the company's flow of incoming business deals.
-            p We knew we would have to accept a period of time when different flows within Battlefy could have wildly different UI and branding. My strategy was to start small, with features that had less traffic and visibility. As the design system grew to completion, it would make adoption much quicker and easier for the high-impact core user flows, and we could thus minimize this period of conflicting visual messaging as much as possible.
-            p Because developers were already building every new project from the ground up, with brand new designs each time, there was actually very little extra overhead in starting up a new design system, with the majority of the up-front work coming from design resources in writing up component guidelines.
-
-            h5 Measuring success
-
-            p I created some OKR's to help us track the system's success over time, as well as give the team tangible goals to work to achieve. Key results would be set quarter to quarter to move the needle on this project.
+            p I created some OKR's to help the team track the system's progress over time, as well as give the team tangible goals to work to achieve. Key results would be set quarter to quarter to move the needle on this project.
 
             p
               b Objective:
@@ -122,7 +148,7 @@ block content
             p
               b Objective:
               |  Time is saved on repeat solutions across the product team.
-            p We would track both the cost of designing and developing each component, and also the number of times it was re-used across the platform. I knew that there would be some amount of up-front cost to maintaining a design system (this included creating and maintaining a Sketch design symbol library, writing up component guidelines, and extensive visual QA testing on components), and I wanted us to track it, and prove that in the long run, we'd still end up saving more time.
+            p We would track both the cost of designing and developing each component, and also the number of times it was re-used across the platform. I knew that there would be some amount of up-front cost to maintaining a design system (this included creating and maintaining a Sketch design symbol library, writing up component guidelines, and extensive visual QA testing on components), and I wanted us to track it, in order to prove that in the long run, we'd still end up saving more time.
 
             p
               b Objective:
