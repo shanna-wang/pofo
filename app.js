@@ -1,3 +1,5 @@
+var sslRedirect = require('heroku-ssl-redirect');
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,6 +9,7 @@ var bodyParser = require('body-parser');
 var jquery = require('jquery');
 var routes = require('./routes/index');
 var designs = require('./routes/designs');
+
 
 
 var app = express();
@@ -26,8 +29,7 @@ app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 app.use("/swupscroll", express.static(path.join(__dirname, "/node_modules/@swup/scroll-plugin/dist")));
 
 
-
-
+app.use(sslRedirect());
 
 
 app.use('/', routes);
