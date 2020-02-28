@@ -25,6 +25,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 app.use("/swupscroll", express.static(path.join(__dirname, "/node_modules/@swup/scroll-plugin/dist")));
 
+
+
+app.use(function (req, res, next) {
+  if (req.secure) {
+    // request was via https, so do no special handling
+    next();
+  } else {
+    // request was via http, so redirect to https
+    res.redirect('https://' + req.headers.host + req.url);
+  }
+});
+
+
+
 app.use('/', routes);
 
 
@@ -97,11 +111,7 @@ const config = {
   maxAge: 20000000
 }
 
-app.use(function(request, response){
-  if(request.protocol === "http"){
-    response.redirect("https://" + request.headers.host + request.url);
-  }
-});
+
 
 
 
