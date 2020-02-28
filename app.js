@@ -97,6 +97,13 @@ const config = {
   maxAge: 20000000
 }
 
+app.use(function(request, response){
+  if(!request.secure){
+    response.redirect("https://" + request.headers.host + request.url);
+  }
+});
+
+
 
 app.use('/about', function(req, res, next) {
   res.render('about');
