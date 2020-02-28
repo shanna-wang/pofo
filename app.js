@@ -28,7 +28,7 @@ app.use("/swupscroll", express.static(path.join(__dirname, "/node_modules/@swup/
 
 
 app.use(function (req, res, next) {
-  if (req.secure) {
+  if (request.protocol !== "http") {
     // request was via https, so do no special handling
     next();
   } else {
