@@ -1,0 +1,53 @@
+extends ../layouts/pofo-v2
+
+block content
+
+  .container-content#swup
+
+    .transition-fade
+      nav
+        .container
+          a.back(href="/")
+            img(src='../img/2019/arrow_left.svg')
+            | Back
+          a.logo(href='/')
+
+      .container
+        .work-header-content
+          h1 Apple
+
+    .transition-slide-up.work-body
+
+
+      .container
+
+        .work-preview
+          img(src='../img/2019/works/apple/mocks/preview.png')
+
+        //- a.back-to-top(href='#')
+        //-   img(src='../img/2019/arrow_top.svg')
+        //-   | Back to top
+
+
+        .divider
+
+
+
+        .body-section
+          .body-section-title
+            h2 Today
+          .body-section-content
+            p Almost all content across Apple's media products is handpicked by editorial teams across the globe. I'm currently leading the design effort for editorial tooling across Apple Music, Books, and Podcasts.
+            br
+            p Drop me a line to learn more about the problems I'm solving!
+
+        .divider
+        .body-section.full
+
+          h2 Thanks for reading!
+          br
+          a.button(href='/')
+            | Back to works
+            img(src='../img/2019/arrow_right_black.svg')
+
+        .divider

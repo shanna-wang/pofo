@@ -130,6 +130,9 @@ app.use(function(req, res, next) {
 
 // password success
 
+app.use('/designs/apple', function(req, res, next) {
+  res.render('works/apple');
+});
 
 app.use('/designs/comet-design-system', function(req, res, next) {
   res.render('works/comet-design-system');
@@ -170,14 +173,6 @@ app.use('/designs/flatbook', function(req, res, next) {
 app.use('/designs/travelhacks', function(req, res, next) {
   res.render('works/travelhacks');
 });
-
-
-// app.use('/designs', designs);
-console.log("failed to route to design");
-
-// app.get('/designs/comet-design-system', function(req, res, next) {
-//   res.render('works/comet-design-system');
-// });
 
 
 // catch 404 and forward to error handler
